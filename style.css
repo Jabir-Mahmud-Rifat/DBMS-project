@@ -11,7 +11,7 @@
     position: relative;
     width: 100%;
     min-height: 100vh;
-    background-color: white;
+    background-color: rgb(20, 20, 20);
     overflow: hidden;
 }
 
@@ -21,7 +21,7 @@
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(-45deg, rgb(153, 246, 82), rgb(143, 255, 58));
+    background: linear-gradient(45deg, rgb(111, 255, 0), rgb(0, 173, 66));
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
@@ -46,6 +46,7 @@
     display: grid;
     grid-template-columns: 1fr;
     z-index: 5;
+    transition: 1s 0.7s ease-in-out;
 }
 
 form{
@@ -69,8 +70,8 @@ form.sign-up-form{
 }
 
 .login-signup .title{
-    font-size: 36px;
-    color: rgb(21, 21, 21);
+    font-size: 40px;
+    color: rgb(109, 240, 79);
     margin: 20px 0px;
 }
 
@@ -78,7 +79,7 @@ form.sign-up-form{
     max-width: 400px;
     width: 100%;
     height: 55px;
-    background-color: rgb(235, 235, 235);
+    background-color: rgb(33, 35, 32);
     margin: 10px 0px;
     border-radius: 30px;
     display: grid;
@@ -89,7 +90,7 @@ form.sign-up-form{
 .input-field i{
     text-align: center;
     line-height: 60px;
-    color: rgb(112, 112, 112);
+    color: rgb(224, 224, 224);
     font-size: 18px;
 }
 
@@ -115,22 +116,24 @@ form.sign-up-form{
     outline: none;
     border-radius: 30px;
     cursor: pointer;
-    background-color: rgb(158, 255, 83);
-    color: white;
+    background-color: rgb(23, 255, 112);
+    color: rgb(43, 43, 43);
     text-transform: uppercase;
-    font-weight: 700;
+    font-weight: bolder;
     margin: 10px 0px;
     transition: .5s;
 }
 
 .btn:hover{
-    background-color: rgb(92, 149, 48);
-    border: 2px solid rgb(158, 255, 83);
+    background-color: rgb(29, 94, 41);
+    border: 2px solid rgb(93, 255, 120);
+    color: white;
 }
 
 .social-text{
-    padding: 10px 0px;
+    padding: 20px 0px;
     font-size: 15px;
+    color: aliceblue;
 }
 
 .social-media{
@@ -141,20 +144,22 @@ form.sign-up-form{
 .social-icon{
     height: 50px;
     width: 50px;
-    border: 1px solid rgb(49, 49, 49);
+    border: 3px solid rgb(49, 49, 49);
     margin: 0 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    color: rgb(29, 29, 29);
+    color: rgb(221, 221, 221);
     font-size: 20px;
     border-radius: 30px;
 }
 
 .social-icon:hover{
     color: rgb(111, 255, 0);
-    border: 2px solid rgb(67, 109, 34);
+    border: 3px solid rgb(67, 109, 34);
+    transition: 0.5s;
+    transform: scale(1.0);
 }
 
 .panels-container{
@@ -177,7 +182,7 @@ form.sign-up-form{
 }
 
 .panel .content{
-    color: white;
+    color: rgb(255, 255, 255);
     transition: 1s .5s ease-in-out;
 }
 
@@ -193,9 +198,10 @@ form.sign-up-form{
 }
 
 .btn.transparent{
-    margin: 0;
+    margin: 10px 0px;
     background: none;
     border: 2px solid white;
+    color: aliceblue;
     width: 120px;
     height: 50px;
     font-weight: 600;
@@ -232,3 +238,31 @@ form.sign-up-form{
 .container.sign-up-mode .left-panel .content{
     transform: translate(-800px);
 }
+
+.container.sign-up-mode .right-panel .content,
+.container.sign-up-mode .right-panel .image{
+    transform: translateX(0px);
+}
+
+.container.sign-up-mode .left-panel{
+    pointer-events: none;
+}
+
+.container.sign-up-mode .right-panel{
+    pointer-events: all;
+}
+
+.container.sign-up-mode .login-signup{
+    left: 25%;
+}
+
+.container.sign-up-mode form.sign-in-form{
+    z-index: 1;
+    opacity: 0;
+}
+
+.container.sign-up-mode form.sign-up-form{
+    z-index: 2;
+    opacity: 1;
+}
+
