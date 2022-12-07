@@ -7,6 +7,7 @@
     <title>Welcome to Retail Club</title>
 
     <script src="https://kit.fontawesome.com/98e008cd61.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
