@@ -1,3 +1,13 @@
+
+<?php
+include ("connection.php");   // connecting  database 
+
+?>
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,20 +24,24 @@
     <div class="container">
         <div class="forms-container">
             <div class="login-signup">
-                <form action="" class="sign-in-form">
+
+
+
+               
+                <form action="login.php" class="sign-in-form" method = "post"  onsubmit = " return isvalid() ">
                     <h2 class="title">Sign in</h2>
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username">
+                        <input type="text" placeholder="Username" name= "username " id = "username" >
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" name = "password"    id = "password" >
                     </div>
 
-                    <input type="submit" value="Login" class="btn solid">
+                    <input type="submit" value="Login" class="btn solid" name = "submit " >
 
                     <p class="social-text">Or Sign in with social platforms</p>
 
@@ -47,17 +61,21 @@
                     </div>
                 </form>
 
-                <form action="" class="sign-up-form">
+
+
+
+
+                <form action="                " class="sign-up-form" method= "post" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="Email Address">
+                        <input type="text" placeholder="email"  name= "email" id = "email"   >
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password">
+                        <input type="password" placeholder="Password" name = "password"   id = "password" >
                     </div>
 
                     <input type="submit" value="Sign up" class="btn solid">
@@ -105,11 +123,38 @@
         </div>
     </div>
 
-    <?php
-        
-    ?>
+   
 
     <script src="js\app.js"></script>
+
+
+    <script>
+    
+    function isvalid (){
+
+        var username = document.form.username.value;
+        var password = document.form.password.value;
+        if (username.lenhth== "" && password.length== ""){
+            alert("username or password field is empty ");
+            return false 
+        }
+        else{
+
+            if (  password.length== ""){
+            alert(" password field is empty ");
+            return false 
+        }
+        if (username.lenhth== "" ){
+            alert("username  field is empty ");
+            return false 
+        }
+
+
+
+        }
+    }
+
+   </script>
     
 </body>
 </html>
