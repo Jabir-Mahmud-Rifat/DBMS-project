@@ -21,7 +21,7 @@
     width: 2000px;
     height: 2000px;
     border-radius: 50%;
-    background: linear-gradient(45deg, rgb(111, 255, 0), rgb(0, 173, 66));
+    background: linear-gradient(45deg, rgb(115, 177, 57), rgb(7, 37, 18));
     top: -10%;
     right: 48%;
     transform: translateY(-50%);
@@ -102,11 +102,11 @@ form.sign-up-form{
     line-height: 1;
     font-weight: 700;
     font-size: 15px;
-    color: rgb(56, 56, 56);
+    color: rgb(193, 193, 193);
 }
 
 .input-field input::placeholder{
-    color: rgb(177, 177, 177);
+    color: rgb(85, 85, 85);
     font-weight: 500;
 }
 

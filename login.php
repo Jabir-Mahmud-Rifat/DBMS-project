@@ -3,11 +3,11 @@
 
     if(isset ($_POST['submit'])){
 
-        $username = $_POST ['username'];  // in post array we use the name of the box <input>...... </input> (html file )
+        $username = $_POST ['username'];  // in post array we use the name of the box <input>...... </input> (html file)
         $password = $_POST ['password'];
        
      //login logic
-     $sql =  " select * from sign_up  where User_name='$username'    and paswd = '$password' " ;
+     $sql =  " select * from sign_up  where User_name='$username' and paswd = '$password' " ;
 
 
      //now let's store the result  in result variable 
@@ -20,7 +20,7 @@
      $count = mysqli_num_rows($result);
       if($count== 1 ){
 
-        header("Location : welcome.php ");
+        header("Location : index.php ");
          
       }
       else {
@@ -34,9 +34,6 @@
 
 
       }
-
-
-
 
     }
     

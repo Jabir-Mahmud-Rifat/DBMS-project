@@ -1,12 +1,7 @@
 
 <?php
-include ("connection.php");   // connecting  database 
-
+    include ("connection.php");   // connecting  database 
 ?>
-
-
-
-
 
 <!DOCTYPE html>
 <html lang="en">
@@ -25,9 +20,6 @@ include ("connection.php");   // connecting  database
         <div class="forms-container">
             <div class="login-signup">
 
-
-
-               
                 <form action="login.php" class="sign-in-form" method = "post"  onsubmit = " return isvalid() ">
                     <h2 class="title">Sign in</h2>
 
@@ -38,10 +30,10 @@ include ("connection.php");   // connecting  database
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password"    id = "password" >
+                        <input type="password" placeholder="Password" name = "password" id = "password" >
                     </div>
 
-                    <input type="submit" value="Login" class="btn solid" name = "submit " >
+                    <input type="submit" value="Login" class="btn solid" name = "submit" >
 
                     <p class="social-text">Or Sign in with social platforms</p>
 
@@ -60,10 +52,6 @@ include ("connection.php");   // connecting  database
                         </a>
                     </div>
                 </form>
-
-
-
-
 
                 <form action="                " class="sign-up-form" method= "post" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
@@ -123,10 +111,7 @@ include ("connection.php");   // connecting  database
         </div>
     </div>
 
-   
-
     <script src="js\app.js"></script>
-
 
     <script>
     
@@ -134,23 +119,21 @@ include ("connection.php");   // connecting  database
 
         var username = document.form.username.value;
         var password = document.form.password.value;
-        if (username.lenhth== "" && password.length== ""){
+        if (username.length== "" && password.length== ""){
             alert("username or password field is empty ");
             return false 
         }
         else{
 
-            if (  password.length== ""){
-            alert(" password field is empty ");
-            return false 
-        }
-        if (username.lenhth== "" ){
-            alert("username  field is empty ");
-            return false 
-        }
+            if (password.length== ""){
+                alert(" password field is empty ");
+                return false 
+            }
 
-
-
+            if (username.length== "" ){
+                alert("username  field is empty ");
+                return false 
+            }
         }
     }
 
