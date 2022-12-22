@@ -13,7 +13,29 @@ SET time_zone = "+00:00";
 --
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `sign_up`
+--
 
+CREATE TABLE `sign_up` (
+  `User_name` varchar(45) NOT NULL,
+  `User_ID` int(20) NOT NULL,
+  `paswd` varchar(25) NOT NULL,
+  `email` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sign_up`
+--
+
+INSERT INTO `sign_up` (`User_name`, `User_ID`, `paswd`, `email`) VALUES
+('Jabir mahmud RIfat', 203175, 'jabir123', 'jabirnsu00@gmail.com'),
+('abir ', 203176, 'jabir1234 ', 'jabirnsu00@gmail.com'),
+('RIfat', 203177, 'jabir12345 ', 'jabir.mahmud@nothsouth.ed');
+
+--
+-- Indexes for dumped tables
+--
 --
 -- Table structure for table `customer`
 --
@@ -36,22 +58,22 @@ CREATE TABLE `customer` (
 --
 
 INSERT INTO `customer` (`id`, `bill_id`, `cus_name`, `cus_contact`, `cus_address`, `p_name`, `p_category`, `p_unit`, `p_price`, `date`) VALUES
-(1, 1, 'Fahim', '1960839343', 'haluaghat', 'Milk', 'food', '100gm', 500, '2019-12-21'),
-(32, 2, 'Pias', '01485967441', 'Dhaka', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
-(33, 4, 'Pias', '01485967441', 'Dhaka', 'Bisk Club Potato Biscuits', 'Biscuit', '100gm', 25, '2019-12-22'),
-(34, 4, 'Pias', '01485967441', 'Dhaka', 'Shezan Mango Fruit Drinks Pet', 'Juice', '500ml', 45, '2019-12-22'),
-(35, 4, 'Pias', '01485967441', 'Dhaka', 'Fresh Soyabean Oil', 'Oil', '2ltr', 202, '2019-12-22'),
-(36, 4, 'Pias', '01485967441', 'Dhaka', 'Rupchada Soyabin Oil', 'Oil', '2ltr', 202, '2019-12-22'),
-(37, 5, 'Sajib', '01689568525', 'Khulna', 'Tic Tac Candy Mint Flav', 'Chocolate', '7gm', 25, '2019-12-22'),
-(38, 5, 'Sajib', '01689568525', 'Khulna', 'Aarong Laban', 'Juice', '500gm', 50, '2019-12-22'),
-(39, 5, 'Sajib', '01689568525', 'Khulna', 'Fresh Soyabean Oil', 'Oil', '2ltr', 202, '2019-12-22'),
-(40, 5, 'Sajib', '01689568525', 'Khulna', 'Rupchanda Soyabean Oil', 'Oil', '2ltr', 218, '2019-12-22'),
-(41, 6, 'Himel', '01785623514', 'Chattogram', 'Cadbury Perk Chocolate', 'Chocolate', '16gm', 15, '2019-12-22'),
+(1, 1, 'Fahim', '1960839377', 'haluaghat', 'Milk', 'food', '100gm', 500, '2019-12-21'),
+(32, 2, 'Pias', '01455967441', 'Dhaka', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
+(33, 4, 'Pias', '014853117441', 'Dhaka', 'Bisk Club Potato Biscuits', 'Biscuit', '100gm', 25, '2019-12-22'),
+(34, 4, 'Pias', '01485999441', 'Dhaka', 'Shezan Mango Fruit Drinks Pet', 'Juice', '500ml', 45, '2019-12-22'),
+(35, 4, 'Pias', '01485967001', 'Dhaka', 'Fresh Soyabean Oil', 'Oil', '2ltr', 202, '2019-12-22'),
+(36, 4, 'Pias', '01485968841', 'Dhaka', 'Rupchada Soyabin Oil', 'Oil', '2ltr', 202, '2019-12-22'),
+(37, 5, 'Sajib', '016895622525', 'Khulna', 'Tic Tac Candy Mint Flav', 'Chocolate', '7gm', 25, '2019-12-22'),
+(38, 5, 'Sajib', '01689511525', 'Khulna', 'Aarong Laban', 'Juice', '500gm', 50, '2019-12-22'),
+(39, 5, 'Sajib', '01689568445', 'Khulna', 'Fresh Soyabean Oil', 'Oil', '2ltr', 202, '2019-12-22'),
+(40, 5, 'Sajib', '01689588525', 'Khulna', 'Rupchanda Soyabean Oil', 'Oil', '2ltr', 218, '2019-12-22'),
+(41, 6, 'Himel', '017856223514', 'Chattogram', 'Cadbury Perk Chocolate', 'Chocolate', '16gm', 15, '2019-12-22'),
 (42, 6, 'Himel', '01785623514', 'Chattogram', 'Pran Frooto Mango Juice', 'Juice', '500gm', 45, '2019-12-22'),
-(43, 6, 'Himel', '01785623514', 'Chattogram', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
-(44, 6, 'Himel', '01785623514', 'Chattogram', 'Rupchanda Soyabean Oil', 'Oil', '2ltr', 218, '2019-12-22'),
-(45, 7, 'Jhalak', '01856963652', 'dhaka', 'Danish Max Milk Biscuits', 'Biscuit', '70gm', 10, '2019-12-22'),
-(46, 7, 'Jhalak', '01856963652', 'dhaka', 'Aarong Laban', 'Juice', '500gm', 50, '2019-12-22'),
+(43, 6, 'Himel', '01785663514', 'Chattogram', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
+(44, 6, 'Himel', '01785623314', 'Chattogram', 'Rupchanda Soyabean Oil', 'Oil', '2ltr', 218, '2019-12-22'),
+(45, 7, 'Jhalak', '01856921652', 'dhaka', 'Danish Max Milk Biscuits', 'Biscuit', '70gm', 10, '2019-12-22'),
+(46, 7, 'Jhalak', '01856955652', 'dhaka', 'Aarong Laban', 'Juice', '500gm', 50, '2019-12-22'),
 (47, 8, '', '', '', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
 (48, 9, 'Musfiq', '01623854595', 'savar', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-22'),
 (49, 10, '', '', '', 'Tic Tac Candy Mint Flav', 'Chocolate', '7gm', 25, '2019-12-22'),
@@ -192,29 +214,7 @@ CREATE TABLE `signup` (
 
 -- --------------------------------------------------------
 
---
--- Table structure for table `sign_up`
---
 
-CREATE TABLE `sign_up` (
-  `User_name` varchar(45) NOT NULL,
-  `User_ID` int(20) NOT NULL,
-  `paswd` varchar(25) NOT NULL,
-  `email` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `sign_up`
---
-
-INSERT INTO `sign_up` (`User_name`, `User_ID`, `paswd`, `email`) VALUES
-('Jabir mahmud RIfat', 203175, 'jabir123', 'jabirnsu00@gmail.com'),
-('abir ', 203176, 'jabir1234 ', 'jabirnsu00@gmail.com'),
-('RIfat', 203177, 'jabir12345 ', 'jabir.mahmud@nothsouth.ed');
-
---
--- Indexes for dumped tables
---
 
 --
 -- Indexes for table `customer`
