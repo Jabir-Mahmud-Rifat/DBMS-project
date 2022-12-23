@@ -32,8 +32,10 @@
                         <i class="fa-solid fa-key"></i>
                         <input type="password" placeholder="Password" name = "password" id = "password" >
                     </div>
-
+                  
+    
                     <input type="submit" value="Login" class="btn solid" name = "submit" >
+            <!--<button name = "submit"  class ="btn solid "  >login</button> -->
 
                     <p class="social-text">Or Sign in with social platforms</p>
 
@@ -52,10 +54,15 @@
                         </a>
                     </div>
                 </form>
-
-                <form action="                " class="sign-up-form" method= "post" autocomplete = "off">
+    <!--signup pagae -->
+                <form action="signup.php" class="sign-up-form" method= "post" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
+                    <div class="input-field">
+                        <i class="fa-solid fa-envelope"></i>
+                        <input type="text" placeholder="username"  name= "username " id = "username"   >
+                    </div>
+                    
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="text" placeholder="email"  name= "email" id = "email"   >
@@ -66,7 +73,10 @@
                         <input type="password" placeholder="Password" name = "password"   id = "password" >
                     </div>
 
-                    <input type="submit" value="Sign up" class="btn solid">
+                    <input type="submit" value="Sign up"  name="submit " class="btn solid">
+    
+     <!-- done-->
+
 
                     <p class="social-text">Or Sign up with social platforms</p>
 
