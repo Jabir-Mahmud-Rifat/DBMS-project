@@ -1,5 +1,5 @@
 <?php
-include ("connection.phop");
+include ("connection.php");
 
    if(isset($_POST['submit'])) {
      $username = $_POST ['username '];
@@ -14,12 +14,12 @@ include ("connection.phop");
 
      if($run){
           echo "Registration Successfull" ;
-     
+     }
      else{
           echo "error".mysql_error($conn);
      }
    }
 
-   }
+   
 
 ?>

@@ -6,7 +6,7 @@
     die("Connection failed: " . $conn->connect_error);
   }
   else {
-    echo "  ";
+    echo " Database is connecting successfully ";
   }
 
 ?>
