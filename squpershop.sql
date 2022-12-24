@@ -95,7 +95,7 @@ INSERT INTO `customer` (`id`, `bill_id`, `cus_name`, `cus_contact`, `cus_address
 (65, 35, 'Shima', '5677788', 'Katabon', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
 (66, 36, 'Asif', '016253695', 'Dhanmondi', 'Nestle Kit Kat', 'Chocolate', '40gm', 50, '2019-12-27'),
 (67, 37, 'Shafiq', '0198795', 'norda', 'Aarong Laban', 'Juice', '500gm', 50, '2019-09-07'),
-(68, 38, 'Moon', '0198943295', 'gazipur', 'Aarong Laban', 'Juice', '500gm', 50, '2019-04-07'),
+(68, 38, 'Moon', '0198943295', 'gazipur', 'Aarong Laban', 'Juice', '500gm', 50, '2019-04-07');
 
 -- --------------------------------------------------------
 
@@ -223,7 +223,7 @@ ALTER TABLE `customer`
 -- Indexes for table `employees`
 --
 ALTER TABLE `employees`
-  ADD PRIMARY KEY (`eid`);
+  ADD PRIMARY KEY (`Employee_Id`);
 
 --
 -- Indexes for table `productlist`
@@ -251,5 +251,5 @@ ALTER TABLE `customer`
 -- AUTO_INCREMENT for table `employees`
 --
 ALTER TABLE `employees`
-  MODIFY `eid` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `Employee_Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
