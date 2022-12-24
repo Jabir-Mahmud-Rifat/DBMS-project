@@ -31,8 +31,8 @@ CREATE TABLE `sign_up` (
 INSERT INTO `sign_up` (`User_name`, `User_ID`, `paswd`, `email`) VALUES
 ('Jabir mahmud RIfat', 203175, 'jabir123', 'jabirnsu00@gmail.com'),
 ('Nafis Fuad ', 20132306, 'nafis123 ', 'nafisnsu00@gmail.com'),
-('Sabrina',201292, 'katha12345 ', 'sabrinakathad@nothsouth.ed');
-('Arjun ', 203642, 'arjun123 ', 'arjunnsu00@gmail.com'),
+('Sabrina',201292, 'katha12345 ', 'sabrinakathad@nothsouth.ed'),
+('Arjun ', 203642, 'arjun123 ', 'arjunnsu00@gmail.com');
 --
 -- Indexes for dumped tables
 --

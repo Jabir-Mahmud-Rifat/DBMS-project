@@ -62,12 +62,14 @@
                         <i class="fa-solid fa-envelope"></i>
                         <input type="text" placeholder="username"  name= "username " id = "username"   >
                     </div>
-                    
+
+
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
                         <input type="text" placeholder="email"  name= "email" id = "email"   >
                     </div>
 
+                    
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
                         <input type="password" placeholder="Password" name = "password"   id = "password" >

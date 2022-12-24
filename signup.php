@@ -1,6 +1,6 @@
 <?php
 include ("connection.php");
-
+  echo "sign up page is working";
    if(isset($_POST['submit'])) {
      $username = $_POST ['username '];
      $email =$_POST ['email'];
@@ -10,7 +10,7 @@ include ("connection.php");
 
      $query = "INSERT INTO  sign_up (User_name,email,paswd )  VALUES ('$username',' $email','$password')";
 
-      $run = mysqli_query ( $conn, $query);
+      $run = mysqli_query ($conn, $query);
 
      if($run){
           echo "Registration Successfull" ;

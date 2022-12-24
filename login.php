@@ -1,6 +1,8 @@
 <?php
  include ("connection.php");   //connecting database 
 
+     echo"login page is working";
+
     if(isset ($_POST['submit'])){
 
         $username = $_POST ['username'];  // in post array we use the name of the box <input>...... </input> (html file)
