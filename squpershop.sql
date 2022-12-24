@@ -141,7 +141,8 @@ INSERT INTO `employees` (`Employee_Id`, `First_Name`, `Last_Name`, `Email`, `Pho
 (201, 'Michael', 'Hartstein', 'MHARSTEIN', '515.123.5555', '2008-02-17', 'MK_MAN', 13000.00, NULL, 100, 20),
 (202, 'Pat', 'Fay', 'PFAY', '603.123.6666', '2010-08-17', 'MK_REP', 6000.00, NULL, 201, 20),
 (205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8050', '2007-06-17', 'AC_MGR', 12000.00, NULL, 101, 110),
-(206, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'AC_ACCOUNT', 8300.00, NULL, 205, 110);
+(206, 'Helley', 'Alex', 'he@gmail.com', '515.123.8050', '2007-06-13', 'AC_MGR', 12000.00, NULL, 101, 110),
+(207, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'AC_ACCOUNT', 8300.00, NULL, 205, 110);
 -- --------------------------------------------------------
 
 --
