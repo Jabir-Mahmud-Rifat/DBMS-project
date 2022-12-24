@@ -86,7 +86,9 @@ INSERT INTO `customer` (`id`, `bill_id`, `cus_name`, `cus_contact`, `cus_address
 (56, 10, 'ighi', 'hgjhg', 'jhghjg', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
 (57, 10, 'ighi', 'hgjhg', 'jhghjg', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
 (58, 10, 'ighi', 'hgjhg', 'jhghjg', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
-(59, 11, '', '', '', 'Cadbury Perk Chocolate', 'Chocolate', '16gm', 15, '2019-12-22');
+(59, 10, 'ighi', 'hgjhg', 'jhghjg', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
+(59, 10, 'ighi', 'hgjhg', 'jhghjg', 'Cadbary Dairy Milk Chocolate', 'Chocolate', '55gm', 100, '2019-12-22'),
+(60, 11, '', '', '', 'Cadbury Perk Chocolate', 'Chocolate', '16gm', 15, '2019-12-22');
 
 -- --------------------------------------------------------
 
