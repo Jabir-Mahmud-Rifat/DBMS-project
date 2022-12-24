@@ -148,6 +148,14 @@ INSERT INTO `employees` (`Employee_Id`, `First_Name`, `Last_Name`, `Email`, `Pho
 (210, 'Pat', 'Anderson', 'PAY', '683.123.6666', '2010-08-19', 'MK_REP', 6000.00, NULL, 204, 20),
 (211, 'Shell', 'Higgins', 'SHI', '515.223.8050', '2007-05-17', 'AC_MGR', 12000.00, NULL, 131, 110),
 (212, 'Helley', 'Shah', 'hs@gmail.com', '585.123.8050', '2007-06-13', 'AC_MGR', 12000.00, NULL, 167, 110),
+(213, 'Patfg', 'Abhnderson', 'BHPAY', '686.123.6666', '2010-08-19', 'MK_REP', 6000.00, NULL, 224, 20),
+(214, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'AC_MGR', 12000.00, NULL, 139, 110),
+(215, 'Halsey', 'Shah', 'has@gmail.com', '585.129.8050', '2017-06-13', 'AC_MGR', 12000.00, NULL, 890, 110),
+(216, 'Sabby', 'Higgins', 'SABBY', '595.223.8050', '2007-09-17', 'AC_MGR', 12000.00, NULL, 133, 110),
+(217, 'Sasha', 'Shah', 'ss@gmail.com', '585.123.8150', '2007-06-23', 'AC_MGR', 12000.00, NULL, 197, 110),
+(218, 'Paffy', 'Abhnderson', 'PFPAY', '606.123.6666', '2011-08-19', 'MK_REP', 6000.00, NULL, 824, 20),
+(219, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'AC_MGR', 12000.00, NULL, 139, 110),
+(220, 'Halsey', 'Soozy', 'zas@gmail.com', '589.129.8050', '2017-06-13', 'AC_MGR', 12000.00, NULL, 290, 110),
 (208, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'AC_ACCOUNT', 8300.00, NULL, 205, 110);
 -- --------------------------------------------------------
 
