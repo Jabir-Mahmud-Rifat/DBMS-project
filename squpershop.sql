@@ -211,7 +211,27 @@ INSERT INTO `productlist` (`p_id`, `P_name`, `category`, `p_price`, `p_unit`, `s
 (45, 'Baoma low smoking Coil', 'Mosqueto coils', 95, '10 pcs', 100);
 
 -- --------------------------------------------------------
+--
+-- Table structure for table `sign_up`
+--
 
+CREATE TABLE `order` (
+  `id` int(5) NOT NUL
+  `order_ID` int(20) NOT NULL,
+  `delivery_Date` date NOT NULL,
+  `payment method` varchar(25) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `sign_up`
+--
+
+INSERT INTO `order` (`id`, `order_ID`, `delivery_Date`, `payment method`) VALUES
+('123', 203175, '2022-01-04', 'cash'),
+('124', 20225, '2022-01-10', 'cash'),
+('125', 203666, '2022-01-12', 'bkash'),
+('126', 203177, '2022-01-07', 'nagad');
+--
 
 --
 -- Indexes for table `customer`
@@ -238,6 +258,14 @@ ALTER TABLE `sign_up`
   ADD PRIMARY KEY (`User_ID`);
 
 --
+--
+-- Indexes for table `sign_up`
+--
+ALTER TABLE `order`
+  ADD PRIMARY KEY (`order_ID`);
+
+--
+
 -- AUTO_INCREMENT for dumped tables
 --
 
