@@ -55,22 +55,29 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
-('01', ' Lux ' ,'sope'),
-('02', ' Kinder Joy ' ,'chocolate'),
-('03', ' Dettol ' ,'soap'),
-('04', ' Savlon ' ,'soap'),
-('05', ' Pran Morich Gura ' ,'mosla'),
-('06', ' ACI Pure Salt ' ,'salt'),
-('07', ' Pran Salt ' ,'salt'),
-('08', ' Atash ' ,'rice'),
-('09', ' Atop ' ,'rice'),
-('10', ' Paijam ' ,'rice'),
-('11', ' Chinigura ' ,'rice'),
-('12', ' NajirShail ' ,'rice'),
-('13', ' Mama Noodles ' ,'noodles'),
-('14', ' Aarong Laban ' ,'juice'),
-('15', ' PRAN Turmeric Powder ' ,'Mosla'),
-('16', ' miniket', 'rice');
+('01', ' Lux ' ,'soup'),
+('02', ' miniket', 'rice');
+
+-- --------------------------------------------------------
+--
+
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `user_Id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `price` int(5) NOT NULL,
+  `Quantity` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `cart` (`user_Id`, `product_id`, `price`,`quantity`) VALUES
+('01', ' 01 ' ,'10','11'),
+('02', ' 01 ' ,'10','12');
 
 -- --------------------------------------------------------
 --
@@ -438,6 +445,12 @@ ALTER TABLE `customer`
 -- Indexes for table `user`
 --
 ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_Id`);
+
+--
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
   ADD PRIMARY KEY (`user_Id`);
 
 --
