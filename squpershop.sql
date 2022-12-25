@@ -55,8 +55,11 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
-('01', ' Lux ' ,'soup'),
-('02', ' miniket', 'rice');
+('01', ' T-SHIRT ' ,'WOOL'),
+('02', ' PANT ' ,'JEANS'),
+('03', ' SHOE ' ,'LEATHER'),
+('04', ' JACKET ' ,'LEATHER'),
+('05', ' SHIRT', 'WOOL');
 
 -- --------------------------------------------------------
 --
