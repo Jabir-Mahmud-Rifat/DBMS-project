@@ -22,7 +22,10 @@ if(isset($_POST['btn'])){
 
   }
   if ($result){
-     echo'your record has been saved in database';
+    echo'your record has been saved in database'; // a statement is need here to return index.php
+    
+         
+
   }
 
   else {
