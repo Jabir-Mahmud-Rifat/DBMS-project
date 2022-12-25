@@ -77,15 +77,7 @@ CREATE TABLE `cart` (
 
 INSERT INTO `cart` (`user_Id`, `product_id`, `price`,`quantity`) VALUES
 ('01', ' 01 ' ,'10','11'),
-('03', ' 02 ' ,'200','1'),
-('04', ' 03 ' ,'150','2'),
-('05', ' 01 ' ,'10','11'),
-('06', ' 02 ' ,'200','5'),
-('07', ' 04 ' ,'110','1'),
-('08', ' 04 ' ,'110','1'),
-('09', ' 05 ' ,'180','1'),
-('10', ' 06 ' ,'130','2'),
-('11', ' 01 ' ,'10','12');
+('02', ' 01 ' ,'10','12');
 
 -- --------------------------------------------------------
 --
@@ -227,52 +219,18 @@ CREATE TABLE `productlist` (
 --
 
 INSERT INTO `productlist` (`p_id`, `P_name`, `category`, `p_price`, `p_unit`, `stock`) VALUES
-(1, 'Nestle Kit Kat', 'Chocolate', 50, '40gm', 45),
-(2, 'Cadbary Dairy Milk Chocolate', 'Chocolate', 100, '55gm', 8),
-(3, 'Kinder Joy', 'Chocolate', 70, '20gm', 12),
-(4, 'Cho Cho Chocolate', 'Chocolate', 70, '40gm', 12),
-(5, 'Tic Tac Candy Mint Flav', 'Chocolate', 25, '7gm', 49),
-(6, 'Cadbury Perk Chocolate', 'Chocolate', 15, '16gm', 19),
-(7, 'Danish Lexus Vegetable Biscuit', 'Biscuit', 50, '250gm', 15),
-(8, 'Danish Max Milk Biscuits', 'Biscuit', 10, '70gm', 15),
-(9, 'BD Foods Butter Toast Biscuit', 'Biscuit', 56, '300gm', 8),
-(10, 'Bisk Club Potato Biscuits', 'Biscuit', 25, '100gm', 8),
-(11, 'Pran Frooto Mango Juice', 'Juice', 45, '500gm', 8),
-(12, 'Aarong Laban', 'Juice', 50, '500gm', 8),
-(13, 'Shezan Mango Fruit Drinks Pet', 'Juice', 45, '500ml', 19),
-(14, 'Latina Apple Juice (Tetra)', 'Juice', 200, '1ltr', 12),
-(15, 'Fresh Soyabean Oil', 'Oil', 202, '2ltr', 17),
-(16, 'Rupchanda Soyabean Oil', 'Oil', 218, '2ltr', 6),
-(17, 'Rupchada Soyabin Oil', 'Oil', 202, '2ltr', 6),
-(18, 'PRAN Turmeric Powder', 'Mosla',100 , '100gm', 100),
-(19, 'PRAN Garlic Powder', 'Mosla',100 , '100gm', 100),
-(20, 'Pran Morich Gura', 'Mosla',100 , '100gm', 125),
-(21, 'Radhuni Morich Gura', 'Mosla',100 , '100gm', 125),
-(22, 'Radhuni Garlic Powder', 'Mosla',100 , '100gm', 100),
-(23, 'Radhuni Turmeric Powder', 'Mosla',100 , '100gm', 100),
-(24, 'LuX', 'Soap',77 , '150gm', 100),
-(25, 'Dettol', 'Soap',77 , '150gm', 100),
-(26, 'Savlon', 'Soap',77 , '150gm', 100),
-(27, 'Sandalina Sandal & Moisturiser Soap', 'Soap',65 , '125gm', 100),
-(28, 'ACI Pure Salt', 'Salt',45 , '1 kg', 100),
-(29, 'Molla Super Salt', 'Salt',40 , '1 kg', 100),
-(30, 'Fresh Pure Salt', 'Salt',45 , '1 kg', 100),
-(31, 'Pran Salt', 'Salt',45 , '1 kg', 100),
-(32, 'Fresh Refined Sugar', 'Sugar',110 , '1 kg', 100),
-(33, 'Pran Refined Sugar', 'Sugar',112 , '1 kg', 100),
-(34, 'MAGGI 2-Minute Noodles Masala Blast ', 'Noodles',87 , '(4packs) 252g', 100),
-(35, 'MAGGI 2-Minute Noodles ', 'Noodles',84 , '(4packs) 252g', 100),
-(36, 'MAMA Noodles ', 'Noodles',87 , '(4packs) 252g', 100),
-(37, 'paijam ', 'Rice', 59, '1 kg', 100),
-(38, 'Chinigura ', 'Rice', 149, '1 kg', 100),
-(39, 'NajirShail ', 'Rice', 359, '5 kg', 100),
-(40, 'Miniket ', 'Rice', 75, '1 kg', 100),
-(41, 'Minicet ', 'Rice', 78, '1 kg', 100),
-(42, 'Atash ', 'Rice', 62, '1 kg', 100),
-(43, 'Atop ', 'Rice', 72, '1 kg', 100),
-(44, 'Pran Chini Gura  ', 'Rice', 89, '1 kg', 100),
-(45, 'Baoma low smoking Coil', 'Mosqueto coils', 95, '10 pcs', 100);
-
+(1, 'ZARRA', 'JACKET', 5000, 'LEATHER', 45),
+(2, 'ZARRA', 'SHIRT', 5000, 'WOOL', 45),
+(3, 'ZARRA', 'SHIRT', 5000, 'HANDPRINT', 45),
+(4, 'ZARRA', 'PANT', 5000, 'JEANS', 45),
+(5, 'ADIDAS', 'JACKET', 5000, 'LEATHER', 45),
+(6, 'ADIDAS', 'T-SHIRT', 5000, 'WOOL', 45),
+(7, 'ADIDAS', 'PANT', 5000, 'JEANS', 45),
+(8, 'NIKE', 'JACKET', 5000, 'LEATHER', 45),
+(9, 'NIKE', 'T-SHIRT', 5000, 'WOOL', 45),
+(10, 'NIKE', 'PANT', 5000, 'JEANS', 45),
+(11, 'NIKE', 'SHOE', 5000, 'LEATHER', 45),
+(12, 'ADIDAS', 'SHOE', 5000, 'LEATHER', 45);
 -- --------------------------------------------------------
 --
 -- Table structure for table `order`
