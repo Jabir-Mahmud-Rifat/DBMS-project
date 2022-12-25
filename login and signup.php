@@ -1,6 +1,97 @@
 
 <?php
-    include ("connection.php");   // connecting  database 
+
+
+   //# include ("connection.php");   // connecting  database 
+
+   $conn = new mysqli ( 'localhost','root','','supper_shop');  //here supper_shop is database name 
+   if ($conn->connect_error) {
+     die("Connection failed: " . $conn->connect_error);
+   }
+   else {
+     echo " Database is connecting success ";
+   }
+
+   //login page 
+
+
+
+
+     echo"login page is working";
+
+    if(isset ($_POST['submit'])){
+
+        $username = $_POST ['username'];  // in post array we use the name of the box <input>...... </input> (html file)
+        $password = $_POST ['password'];
+       
+     //login logic
+     $sql =  " select * from sign_up  where User_name='$username' and paswd = '$password' " ;
+
+
+     //now let's store the result  in result variable 
+      
+     $result = mysqli_query($conn,$sql ) ;
+
+     // we need to store the result as an array 
+
+     $row = mysqli_fetch_array($result , MYSQLI_ASSOC);
+     $count = mysqli_num_rows($result);
+      if($count== 1 ){
+
+        header("Location : index.php ");
+         
+      }
+      else {
+           // if login failed then back to the login page again 
+        echo '<script>
+
+                   window.location.href ="login and signup.php " ;    
+                   alert ("Login failed . invalid username or password !! ");
+
+        </script>';
+
+
+      }
+
+    }
+
+
+    //sign up 
+    echo "sign up page is working";
+   if(isset($_POST['submit'])) {
+     $username = $_POST ['username '];
+     $email =$_POST ['email'];
+     $password = $_POST['password'];
+     
+
+
+     $query = "INSERT INTO  sign_up (User_name,email,paswd )
+       VALUES ('$username',' $email','$password')";
+
+      $run = mysqli_query ($conn, $query);
+
+     if($run){
+          echo "Registration Successfull" ;
+     }
+     else{
+          echo "error".mysql_error($conn);
+     }
+   }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 ?>
 
 <!DOCTYPE html>
@@ -20,7 +111,7 @@
         <div class="forms-container">
             <div class="login-signup">
 
-                <form action="login.php" class="sign-in-form" method = "post"  onsubmit = " return isvalid() ">
+                <form action=" login and signup.php" class="sign-in-form" method = "post"  onsubmit = " return isvalid() ">
                     <h2 class="title">Sign in</h2>
 
                     <div class="input-field">
@@ -55,7 +146,7 @@
                     </div>
                 </form>
     <!--signup pagae -->
-                <form action="signup.php" class="sign-up-form" method= "post" autocomplete = "off">
+                <form action="login and signup.php" class="sign-up-form" method= "post" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
                     <div class="input-field">
