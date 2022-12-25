@@ -39,9 +39,28 @@ INSERT INTO `account` (`username`, `password`, `email`) VALUES
 ('king', ' 123ert', ' srk00@gmail.com');
 
 -- --------------------------------------------------------
--- Indexes for dumped tables
 --
+
+-- Table structure for table `category`
 --
+
+CREATE TABLE `category` (
+  `Category_id` int(5) NOT NULL,
+  `Category name` varchar(40) NOT NULL,
+  `Description` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
+('01', ' Lux ' ,'soup'),
+('02', ' miniket', 'rice');
+
+-- --------------------------------------------------------
+--
+
 -- Table structure for table `customer`
 --
 
@@ -414,10 +433,20 @@ ALTER TABLE `productlist`
   ADD PRIMARY KEY (`p_id`);
 
 --
+-- Indexes for table `category`
+--
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`Category_id`);
+
+--
+-- Indexes for table `productlist`
+--
+
 -- Indexes for table `account`
 --
 ALTER TABLE `account`
   ADD PRIMARY KEY (`User_ID`);
+
 
 --
 --
