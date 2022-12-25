@@ -1,49 +1,50 @@
 <?php
 
-
-require_once('connection.php');   //connecting database 
-
-     
-
-    if(isset ($_POST['btn'])){
-
-        $username = $_POST ['name'];  // in post array we use the name of the box <input>...... </input> (html file)
-        $password = $_POST ['data'];
- 
-        echo"login page is working";
-
     
-     //login logic
-     $sql =  " select * from account  where username='$username' and password = '$password' " ;
+require_once('connection.php');
+
+//code for connecting next page
+session_start ();
 
 
-     //now let's store the result  in result variable 
-      
-     $result = mysqli_query($conn,$sql ) ;
-
-     // we need to store the result as an array 
-
-     $row = mysqli_fetch_array($result , MYSQLI_ASSOC);
-     $count = mysqli_num_rows($result);
-      if($count== 1 ){
-
-        header("Location : index.php ");
-         
-      }
-      else {
-           // if login failed then back to the login page again 
-        echo '<script>
-
-                   window.location.href ="login and signup.php " ;    
-                   alert ("Login failed . invalid username or password !! ");
-
-        </script>';
+      if(isset($_POST['click']))
+      {
+        // echo 'WELCOME HOME BABY';
+        $username =  mysqli_real_escape_string($conn,$_POST['log_name']); 
+        $password  = mysqli_real_escape_string($conn,$_POST['log_pass']); 
 
 
-      }
+        if(empty($username)|| empty($password)){
 
-    }
+           echo " please fill in the blanks  ";
+
+        }
+        else
+        {
+          $query = "select * from  account where username ='$username'";
+          $result = mysqli_query($conn, $query);
+           
+          if($row=mysqli_fetch_assoc($result))
+            {
+               $db_pass= $row ['log_pass'];
+               
+               if(md5( $password )==$db_pass)
+               {
+                header('location:index.php') ;
+               }
+               else{
    
+                echo "Incorrect password" ;
+               }
+
+            }
+
+            else {
+              echo'Please check your query';
+           }
+        }
 
 
+      }
+  
 ?>
