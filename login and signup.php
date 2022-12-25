@@ -29,16 +29,16 @@
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "username " id = "username" >
+                        <input type="text" placeholder="Username" name= "name"  >
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password" id = "password" >
+                        <input type="password" placeholder="Password" name = "data"  >
                     </div>
                   
     
-                    <input type="submit" value="Login" class="btn solid" name = "submit1" >
+                    <input type="submit" value="Login" class="btn solid" name = "click" >
             <!--<button name = "submit"  class ="btn solid "  >login</button> -->
 <!--done with login -->
                     <p class="social-text">Or Sign in with social platforms</p>

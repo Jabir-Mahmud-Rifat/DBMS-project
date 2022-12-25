@@ -1,17 +1,20 @@
 <?php
 
-/*
- include ("connection.php");   //connecting database 
 
-     echo"login page is working";
+require_once('connection.php');   //connecting database 
 
-    if(isset ($_POST['submit'])){
+     
 
-        $username = $_POST ['username'];  // in post array we use the name of the box <input>...... </input> (html file)
-        $password = $_POST ['password'];
-       
+    if(isset ($_POST['btn'])){
+
+        $username = $_POST ['name'];  // in post array we use the name of the box <input>...... </input> (html file)
+        $password = $_POST ['data'];
+ 
+        echo"login page is working";
+
+    
      //login logic
-     $sql =  " select * from sign_up  where User_name='$username' and paswd = '$password' " ;
+     $sql =  " select * from account  where username='$username' and password = '$password' " ;
 
 
      //now let's store the result  in result variable 
@@ -41,6 +44,6 @@
 
     }
    
-*/
+
 
 ?>
