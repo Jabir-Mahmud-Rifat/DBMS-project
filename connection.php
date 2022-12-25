@@ -6,8 +6,5 @@
   if(!$conn){
     echo 'plese check your database ';
   }
-  
- 
-    echo " database is connected seccessfully " ; 
  
 ?>

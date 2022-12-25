@@ -1,10 +1,8 @@
 
 <?php
 
-
   include ("connection.php");   // connecting  database 
 
-  
 ?>
 
 <!DOCTYPE html>
