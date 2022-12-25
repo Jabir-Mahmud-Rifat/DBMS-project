@@ -79,35 +79,41 @@ input{
     outline: none;
 }
 
-/* layout */
-.container{
-    max-width: 1000px;
-    margin: 0 auto;
-}
-
-.grid{
-    display: grid;
-}
-
 /* header */
 
 .header{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background-color: transparent;
-    position: fixed;
-    z-index: 2;
+    padding: 20px 80px;
     width: 100%;
 }
 
-/* navbar */
-.nav{
-    height: calc(var(--default-height-header) + 1.5rem);
+.container{
     display: flex;
-    justify-content: space-between;
-    column-gap: 3rem;
     align-items: center;
+    padding: 20px 20px;
+    justify-content: space-between;
+    background-color: transparent;
+}
+
+/* navbar */
+.nav-list{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-item{
+    padding: 0px 20px;
+}
+
+.nav a{
+    color: white;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+.nav-logo i{
+    transform: scale(1.5);
+    padding-right: 10px;
 }
 
 
