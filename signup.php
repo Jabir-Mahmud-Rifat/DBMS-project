@@ -2,6 +2,10 @@
 
 require_once('connection.php');
 
+ //code for connecting next page
+   session_start ();
+
+
 if(isset($_POST['btn'])){
      
      $UserNmane= mysqli_real_escape_string($conn,$_POST['hi']);
@@ -22,9 +26,10 @@ if(isset($_POST['btn'])){
 
   }
   if ($result){
-    echo'your record has been saved in database'; // a statement is need here to return index.php
-    
-         
+     // a statement is need here to return index.php
+                                                        // echo'your record has been saved in database';
+    // $_SESSION['username']= $UserNmane;
+     header('location:index.php') ;
 
   }
 

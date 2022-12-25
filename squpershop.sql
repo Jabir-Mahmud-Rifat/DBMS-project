@@ -14,29 +14,82 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 --
--- Table structure for table `sign_up`
+
+-- Table structure for table `account`
 --
 
-CREATE TABLE `sign_up` (
-  `User_name` varchar(45) NOT NULL,
-  `User_ID` int(20) NOT NULL,
-  `paswd` varchar(25) NOT NULL,
-  `email` varchar(25) NOT NULL
+CREATE TABLE `account` (
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `sign_up`
+-- Dumping data for table `account`
 --
 
-INSERT INTO `sign_up` (`User_name`, `User_ID`, `paswd`, `email`) VALUES
-('Jabir mahmud RIfat', 203175, 'jabir123', 'jabirnsu00@gmail.com'),
-('Nafis Fuad ', 20132306, 'nafis123 ', 'nafisnsu00@gmail.com'),
-('Sabrina',201292, 'katha12345 ', 'sabrinakathad@nothsouth.ed'),
-('Arjun ', 203642, 'arjun123 ', 'arjunnsu00@gmail.com');
+INSERT INTO `account` (`username`, `password`, `email`) VALUES
+('rakib', ' shakib ', '25f9e794323b453885f5181f1b624d'),
+('SHAKIB', ' shakib75@gmail.com', 'd3c4fb694484de76fc00096d34a64b'),
+('MESSI', '1f42d189bd95aa44423e0263de1908d4', ' messi2022@gmail.com'),
+('CR7', ' 12345', ' cr7@gmail.com'),
+('vvjhvjhvj', ' 12335454', ' hfhjhj@gmail.com'),
+('varun', ' 12345678tr', ' varun75@gmail.com'),
+('king', ' 123ert', ' srk00@gmail.com'),
+('king', ' 123ert', ' srk00@gmail.com');
+
+-- --------------------------------------------------------
 --
--- Indexes for dumped tables
+
+-- Table structure for table `category`
 --
+
+CREATE TABLE `category` (
+  `Category_id` int(5) NOT NULL,
+  `Category name` varchar(40) NOT NULL,
+  `Description` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
+-- Dumping data for table `category`
+--
+
+INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
+('01', ' Lux ' ,'soup'),
+('02', ' miniket', 'rice');
+
+-- --------------------------------------------------------
+--
+
+-- Table structure for table `cart`
+--
+
+CREATE TABLE `cart` (
+  `user_Id` int(5) NOT NULL,
+  `product_id` int(5) NOT NULL,
+  `price` int(5) NOT NULL,
+  `Quantity` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `category`
+--
+
+INSERT INTO `cart` (`user_Id`, `product_id`, `price`,`quantity`) VALUES
+('01', ' 01 ' ,'10','11'),
+('03', ' 02 ' ,'200','1'),
+('04', ' 03 ' ,'150','2'),
+('05', ' 01 ' ,'10','11'),
+('06', ' 02 ' ,'200','5'),
+('07', ' 04 ' ,'110','1'),
+('08', ' 04 ' ,'110','1'),
+('09', ' 05 ' ,'180','1'),
+('10', ' 06 ' ,'130','2'),
+('11', ' 01 ' ,'10','12');
+
+-- --------------------------------------------------------
+--
+
 -- Table structure for table `customer`
 --
 
@@ -403,20 +456,36 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_Id`);
 
 --
+-- Indexes for table `cart`
+--
+ALTER TABLE `cart`
+  ADD PRIMARY KEY (`user_Id`);
+
+--
 -- Indexes for table `productlist`
 --
 ALTER TABLE `productlist`
   ADD PRIMARY KEY (`p_id`);
 
 --
--- Indexes for table `sign_up`
+-- Indexes for table `category`
 --
-ALTER TABLE `sign_up`
+ALTER TABLE `category`
+  ADD PRIMARY KEY (`Category_id`);
+
+--
+-- Indexes for table `productlist`
+--
+
+-- Indexes for table `account`
+--
+ALTER TABLE `account`
   ADD PRIMARY KEY (`User_ID`);
+
 
 --
 --
--- Indexes for table `sign_up`
+-- Indexes for table `account`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`order_ID`);

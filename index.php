@@ -1,5 +1,8 @@
 <?php
     include("connection.php");
+     session_start ();  
+    // echo "Welcome  ". $_SESSION['username'] ;  
+
 ?>
 
 <!DOCTYPE html>
