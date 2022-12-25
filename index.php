@@ -74,6 +74,29 @@
 
         </section>
     </div>
+
+    <section class="feature-product">
+        <h2>Featured products</h2>
+        <p>Check Out Our Prized Possessions</p>
+        <div class="product-container">
+            <div class="product">
+                <img src="https://i.ibb.co/2N16zHr/TOO-HOT-TO-HANDLE-mockup-image.jpg" alt="">
+                <div class="description">
+                    <span>Unisex Clothing</span>
+                    <h5>Too Hot to Handle T-shirt</h5>
+                    <div class="rating">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h4>BDT. 850</h4>
+                </div>
+                <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
+            </div>
+        </div>
+    </section>
     
 </body>
 </html>

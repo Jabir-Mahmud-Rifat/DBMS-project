@@ -25,6 +25,7 @@ h2{
     font-size: 45px;
     line-height: 55px;
     color: rgb(255, 255, 255);
+    text-transform: capitalize;
 }
 
 h3{
@@ -85,6 +86,9 @@ input{
 .header{
     padding: 20px 80px;
     width: 100%;
+    position: sticky;
+    top: 0;
+    left: 0;
 }
 
 .container{
@@ -171,38 +175,40 @@ input{
 .hero h4{
     font-stretch: expanded;
     font-size: 18px;
-    font-weight: 400;
+    font-weight: 700;
     letter-spacing: 10px;
     font-family: 'Courier New', Courier, monospace;
     padding-bottom: 10px;
-    color: antiquewhite;
+    color: rgb(62, 38, 7);
 }
 
 .hero h2{
     font-size: 75px;
     line-height: 80px;
     text-transform: capitalize;
+    color: rgb(223, 89, 18);
 }
 
 .hero h2 span{
-    color: aquamarine;
+    color: rgb(42, 22, 0);
 }
 
 .hero h6{
-    font-weight: 300;
+    font-weight: 400;
     font-size: 14px;
     padding-top: 10px;
+    color: rgb(62, 38, 7);
 }
 
 .hero p{
-    font-weight: 200;
-    color: rgb(191, 176, 158);
+    font-weight: 400;
+    color: rgb(222, 130, 37);
     padding-bottom: 20px;
 }
 
 .hero button{
-    color: rgb(80, 80, 80);
-    background-color: rgb(253, 253, 253);
+    color: rgb(255, 255, 255);
+    background-color: rgb(246, 97, 5);
     text-decoration: none;
     border: 2px solid transparent;
     font-weight: bold;
@@ -213,8 +219,22 @@ input{
     transition: transform 0.5s;
 }
 
+.feature-product{
+    text-align: center;
+    padding: 40px 80px;
+    height: 100vh;
+}
 
+.feature-product .product{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 15px;
+    border: 1px solid black;
+}
 
-
-
-
+.product-container{
+    padding-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
