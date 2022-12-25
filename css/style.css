@@ -151,7 +151,7 @@ input{
 
 /* navbar */
 .self{
-    background-image: url("https://i.ibb.co/58mBPzz/gorgeous-brunette-woman-with-red-lips-wearing-furry-coat-cocktail-dress-posing.jpg");
+    background-image: url("https://i.ibb.co/KN66CVy/enchanting-girl-with-dark-curly-hair-fooling-around-outdoor-warm-summer-day-amazing-ginger-female-mo.jpg");
     height: 100vh;
     width: 100%;
     background-position: top 25%;
@@ -173,6 +173,7 @@ input{
     font-size: 18px;
     font-weight: 400;
     letter-spacing: 10px;
+    font-family: 'Courier New', Courier, monospace;
     padding-bottom: 10px;
     color: antiquewhite;
 }
