@@ -27,8 +27,8 @@ if(isset($_POST['btn'])){
   }
   if ($result){
      // a statement is need here to return index.php
-    // echo'your record has been saved in database';
-     $_SESSION['username']= $UserNmane;
+                                                        // echo'your record has been saved in database';
+    // $_SESSION['username']= $UserNmane;
      header('location:index.php') ;
 
   }
