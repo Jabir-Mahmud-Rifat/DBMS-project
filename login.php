@@ -1,6 +1,6 @@
 <?php
 
-
+/*
  include ("connection.php");   //connecting database 
 
      echo"login page is working";
@@ -40,7 +40,7 @@
       }
 
     }
-    
-
+   
+*/
 
 ?>

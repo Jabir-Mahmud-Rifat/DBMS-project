@@ -38,7 +38,7 @@
                     </div>
                   
     
-                    <input type="submit" value="Login" class="btn solid" name = "submit" >
+                    <input type="submit" value="Login" class="btn solid" name = "submit1" >
             <!--<button name = "submit"  class ="btn solid "  >login</button> -->
 <!--done with login -->
                     <p class="social-text">Or Sign in with social platforms</p>
@@ -64,22 +64,22 @@
 
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="username"  name= "username " id = "username"   >
+                        <input type="text" placeholder="username"  name= "hi"   >
                     </div>
 
 
                     <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="email"  name= "email" id = "email"   >
+                        <input type="text" placeholder="email"  name= "hello"   >
                     </div>
 
                     
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "password"   id = "password" >
+                        <input type="password" placeholder="Password" name = "hi5"    >
                     </div>
 
-                    <input type="submit" value="Sign up"  name="submit " class="btn solid">
+                    <input type="submit" value="Sign up"  name="btn" class="btn solid">
     
      <!-- done-->
 

@@ -1,30 +1,24 @@
 <?php
 
+require_once('connection.php');
 
-
-include ("connection.php");
-
-
-  echo "sign up page is working";
-   if(isset($_POST['submit'])) {
-     $username = $_POST ['username '];
-     $email =$_POST ['email'];
-     $password = $_POST['password'];
+if(isset($_POST['btn'])){
      
+     $UserNmane= mysqli_real_escape_string($conn,$_POST['hi']);
+     $Email = mysqli_real_escape_string($conn,$_POST['hello']);
+     $Password= mysqli_real_escape_string($conn,$_POST['hi5']);
+   
 
 
-     $query = "INSERT INTO  sign_up (User_name,email,paswd )
-       VALUES ('$username',' $email','$password')";
 
-      $run = mysqli_query ($conn, $query);
 
-     if($run){
-          echo "Registration Successfull" ;
-     }
-     else{
-          echo "error".mysql_error($conn);
-     }
-   }
+
+  echo  $UserNmane,  $Email, $Password ;
+
+
+}
+
+
 
    
 ?>
