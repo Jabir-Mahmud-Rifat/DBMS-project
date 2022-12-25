@@ -16,7 +16,8 @@ if(isset($_POST['btn'])){
 
   else {
       $pass= md5($Password); //increpted the password
-      $sql = "Insert into account (username,password,email) values('$UserNmane',' $Email' , '$pass' )" ;
+      $sql = "Insert into account (username,password,email) values('$UserNmane', ' $Password',' $Email' )" ; //we want to see the pass so 
+      //we use $Password in the query insted of $pass
       $result = mysqli_query($conn, $sql);
 
   }
