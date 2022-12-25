@@ -9,11 +9,26 @@ if(isset($_POST['btn'])){
      $Password= mysqli_real_escape_string($conn,$_POST['hi5']);
    
 
+   if (empty($UserNmane)|| empty($Email) || empty($Password)){
 
+     echo 'Please fill the blanks' ;
+   }
 
+  else {
+      $pass= md5($Password); //increpted the password
+      $sql = "Insert into account (username,password,email) values('$UserNmane',' $Email' , '$pass' )" ;
+      $result = mysqli_query($conn, $sql);
 
+  }
+  if ($result){
+     echo'your record has been saved in database';
+  }
 
-  echo  $UserNmane,  $Email, $Password ;
+  else {
+     echo'Please check your query';
+  }
+
+  
 
 
 }
