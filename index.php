@@ -18,7 +18,7 @@
     <header class="header" id="header">
         <nav class="nav container">
             <a href="index.php" class="nav-logo">
-                <i class="fa-solid fa-basket-shopping"></i> Retail Club
+                <i class="fa-solid fa-vest-patches"></i> Retail Club
             </a>
 
             <div class="nav-menu" id="nav-menu">
@@ -46,17 +46,17 @@
             </div>
 
             <div class="nav-btn">
-                <div class="login-btn" id="login-btn">
-                    <i class="fa-solid fa-user"></i>
-                </div>
 
-                <div class="nav-cart" id="cart-shop">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                <ul class="nav-list">
+                    <li class="nav-item">
+                        <a href="index.php" class="login-btn" id="login-btn"><i class="fa-solid fa-user"></i></a>
+                    </li>
 
-                <div class="nav-cart" id="cart-shop">
-                    <i class="fa-solid fa-cart-shopping"></i>
-                </div>
+                    <li class="nav-item">
+                        <a href="#" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
+                    </li>
+                </ul>
+
             </div>
         </nav>
     </header>
