@@ -24,18 +24,19 @@ h1{
 h2{
     font-size: 45px;
     line-height: 55px;
-    color: rgb(19, 19, 19);
+    color: rgb(255, 255, 255);
 }
 
 h3{
     font-size: 36px;
     line-height: 30px;
-    color: rgb(19, 19, 19);
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
 }
 
 h4{
     font-size: 20px;
-    color: rgb(19, 19, 19);
+    color: rgb(255, 255, 255);
 }
 
 h6{
@@ -46,7 +47,7 @@ h6{
 p{
     font-size: 15px;
     font-weight: 400;
-    color: rgb(40, 40, 40);
+    color: rgb(208, 208, 208);
 }
 
 body{
@@ -99,21 +100,120 @@ input{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 50px;
 }
 
 .nav-item{
     padding: 0px 20px;
+    position: relative;
 }
 
 .nav a{
     color: white;
-    font-weight: 400;
+    font-weight: 500;
     text-transform: capitalize;
+    transition: 0.3s ease;
+}
+
+.nav a:hover{
+    color: rgba(255, 255, 255, 0.64);
+}
+
+.nav-list a:hover,
+.nav-list a.active{
+    color: rgba(139, 232, 245, 0.925);
+}
+
+.nav-list a.active::after,
+.nav-list a:hover::after{
+    content: "";
+    width: 30%;
+    height: 2px;
+    background: rgba(130, 222, 234, 0.925);
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
 }
 
 .nav-logo i{
-    transform: scale(1.5);
     padding-right: 10px;
 }
+
+.nav-logo{
+    font-size: 24px;
+    font-weight: 800;
+}
+
+.nav-list i{
+    transform: scale(1.2);
+}
+
+
+/* navbar */
+.self{
+    background-image: url("https://i.ibb.co/58mBPzz/gorgeous-brunette-woman-with-red-lips-wearing-furry-coat-cocktail-dress-posing.jpg");
+    height: 100vh;
+    width: 100%;
+    background-position: top 25%;
+    background-size: cover;
+}
+
+.hero{
+    height: 60vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 0px 100px;
+}
+
+.hero h4{
+    font-stretch: expanded;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: 10px;
+    padding-bottom: 10px;
+    color: antiquewhite;
+}
+
+.hero h2{
+    font-size: 75px;
+    line-height: 80px;
+    text-transform: capitalize;
+}
+
+.hero h2 span{
+    color: aquamarine;
+}
+
+.hero h6{
+    font-weight: 300;
+    font-size: 14px;
+    padding-top: 10px;
+}
+
+.hero p{
+    font-weight: 200;
+    color: rgb(191, 176, 158);
+    padding-bottom: 20px;
+}
+
+.hero button{
+    color: rgb(80, 80, 80);
+    background-color: rgb(253, 253, 253);
+    text-decoration: none;
+    border: 2px solid transparent;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+
+
+
 
 
