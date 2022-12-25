@@ -14,26 +14,31 @@ SET time_zone = "+00:00";
 
 -- --------------------------------------------------------
 --
--- Table structure for table `sign_up`
+
+-- Table structure for table `account`
 --
 
-CREATE TABLE `sign_up` (
-  `User_name` varchar(45) NOT NULL,
-  `User_ID` int(20) NOT NULL,
-  `paswd` varchar(25) NOT NULL,
-  `email` varchar(25) NOT NULL
+CREATE TABLE `account` (
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `sign_up`
+-- Dumping data for table `account`
 --
 
-INSERT INTO `sign_up` (`User_name`, `User_ID`, `paswd`, `email`) VALUES
-('Jabir mahmud RIfat', 203175, 'jabir123', 'jabirnsu00@gmail.com'),
-('Nafis Fuad ', 20132306, 'nafis123 ', 'nafisnsu00@gmail.com'),
-('Sabrina',201292, 'katha12345 ', 'sabrinakathad@nothsouth.ed'),
-('Arjun ', 203642, 'arjun123 ', 'arjunnsu00@gmail.com');
---
+INSERT INTO `account` (`username`, `password`, `email`) VALUES
+('rakib', ' shakib ', '25f9e794323b453885f5181f1b624d'),
+('SHAKIB', ' shakib75@gmail.com', 'd3c4fb694484de76fc00096d34a64b'),
+('MESSI', '1f42d189bd95aa44423e0263de1908d4', ' messi2022@gmail.com'),
+('CR7', ' 12345', ' cr7@gmail.com'),
+('vvjhvjhvj', ' 12335454', ' hfhjhj@gmail.com'),
+('varun', ' 12345678tr', ' varun75@gmail.com'),
+('king', ' 123ert', ' srk00@gmail.com'),
+('king', ' 123ert', ' srk00@gmail.com');
+
+-- --------------------------------------------------------
 -- Indexes for dumped tables
 --
 --
@@ -409,14 +414,14 @@ ALTER TABLE `productlist`
   ADD PRIMARY KEY (`p_id`);
 
 --
--- Indexes for table `sign_up`
+-- Indexes for table `account`
 --
-ALTER TABLE `sign_up`
+ALTER TABLE `account`
   ADD PRIMARY KEY (`User_ID`);
 
 --
 --
--- Indexes for table `sign_up`
+-- Indexes for table `account`
 --
 ALTER TABLE `order`
   ADD PRIMARY KEY (`order_ID`);
