@@ -55,8 +55,22 @@ CREATE TABLE `category` (
 --
 
 INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
-('01', ' Lux ' ,'soup'),
-('02', ' miniket', 'rice');
+('01', ' Lux ' ,'sope'),
+('02', ' Kinder Joy ' ,'chocolate'),
+('03', ' Dettol ' ,'soap'),
+('04', ' Savlon ' ,'soap'),
+('05', ' Pran Morich Gura ' ,'mosla'),
+('06', ' ACI Pure Salt ' ,'salt'),
+('07', ' Pran Salt ' ,'salt'),
+('08', ' Atash ' ,'rice'),
+('09', ' Atop ' ,'rice'),
+('10', ' Paijam ' ,'rice'),
+('11', ' Chinigura ' ,'rice'),
+('12', ' NajirShail ' ,'rice'),
+('13', ' Mama Noodles ' ,'noodles'),
+('14', ' Aarong Laban ' ,'juice'),
+('15', ' PRAN Turmeric Powder ' ,'Mosla'),
+('16', ' miniket', 'rice');
 
 -- --------------------------------------------------------
 --
