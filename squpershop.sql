@@ -100,63 +100,60 @@ INSERT INTO `customer` (`id`, `bill_id`, `cus_name`, `cus_contact`, `cus_address
 -- --------------------------------------------------------
 
 --
--- Table structure for table `employees`
+-- Table structure for table `user`
 --
 
-CREATE TABLE `employees` (
-  `Employee_Id` int(6) NOT NULL,
-  `First_Name` varchar(20) DEFAULT NULL,
+CREATE TABLE `user` (
+  `user_Id` int(6) NOT NULL,
+  `First_Name` varchar(20) NOT NULL,
   `Last_Name` varchar(25) NOT NULL,
   `Email` varchar(25) NOT NULL,
-  `Phone_Number` varchar(15) DEFAULT NULL,
-  `Hire_Date` date NOT NULL,
-  `Job_Id` varchar(10) NOT NULL,
-  `Salary` double(8,2) DEFAULT NULL,
-  `Commission_pct` double(2,2) DEFAULT NULL,
-  `Manager_id` int(6) DEFAULT NULL,
-  `Department_id` int(4) DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `Phone_Number` varchar(15) NOT NULL,
+  `Add_Date` date NOT NULL,
+  `city` varchar(25) NOT NULL
+
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `employees`
+-- Dumping data for table `user`
 --
 
-INSERT INTO `employees` (`Employee_Id`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Hire_Date`, `Job_Id`, `Salary`, `Commission_pct`, `Manager_id`, `Department_id`) VALUES
-(100, 'Steven', 'King', 'SKING', '515.123.4567', '2006-06-17', 'AD_PRES', 24000.00, NULL, NULL, 90),
-(101, 'Neena', 'Kochar', 'NKOCHAR', '515.123.4568', '2008-09-21', 'AD_VP', 17000.00, NULL, 100, 90),
-(102, 'Lex', 'De Haan', 'DEHAAN', '515.123.4569', '2009-01-13', 'AD_VP', 17000.00, NULL, 100, 90),
-(103, 'Alexander', 'Hunold', 'AHUNOLD', '590.423.4567', '2008-01-03', 'IT_PROG', 9000.00, NULL, 102, 60),
-(104, 'Bruce', 'Ernst', 'BERNST', '590.423.4568', '2009-05-21', 'IT_PROG', 6000.00, NULL, 103, 60),
-(107, 'Diana', 'Lorentz', 'DLORENTZ', '590.423.5567', '2008-02-07', 'IT_PROG', 4200.00, NULL, 103, 60),
-(124, 'Kevin', 'Mourgos', 'KMORGOS', '650.123.5234', '2012-11-16', 'ST_MAN', 5800.00, NULL, 100, 50),
-(141, 'Treena', 'Rajs', 'RRAJS', '650.121.5234', '2004-10-17', 'ST_CLERK', 3500.00, NULL, 124, 50),
-(142, 'Curtis', 'Davies', 'CDAVIES', '121.123.5234', '2007-01-29', 'ST_CLERK', 3100.00, NULL, 124, 50),
-(143, 'Randall', 'Matos', 'RMATOS', '121.123.5234', '2008-03-15', 'ST_CLERK', 2600.00, NULL, 124, 50),
-(144, 'Peter', 'Vargas', 'PVARGAS', '121.123.5234', '2008-07-09', 'ST_CLERK', 2500.00, NULL, 124, 50),
-(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '44.1344.429018', '2014-01-29', 'SA_MAN', 10500.00, 0.20, 100, 80),
-(174, 'Ellen', 'Abel', 'EABEL', '44.1644.429017', '2004-05-11', 'SA_REP', 11000.00, 0.30, 149, 80),
-(176, 'Jnathon', 'Taylor', 'JTAILOR', '44.1644.429021', '2008-03-24', 'SA_MAN', 8600.00, 0.20, 149, 80),
-(178, 'Kimberely', 'Grant', 'KGRANT', '44.1644.429023', '2009-05-29', 'SA_MAN', 7000.00, 0.15, 149, NULL),
-(200, 'Jennifer', 'Whalem', 'JWHALEN', '515.123.4444', '2003-09-17', 'AD_ASST', 4400.00, NULL, 101, 10),
-(201, 'Michael', 'Hartstein', 'MHARSTEIN', '515.123.5555', '2008-02-17', 'MK_MAN', 13000.00, NULL, 100, 20),
-(202, 'Pat', 'Fay', 'PFAY', '603.123.6666', '2010-08-17', 'MK_REP', 6000.00, NULL, 201, 20),
-(205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8050', '2007-06-17', 'AC_MGR', 12000.00, NULL, 101, 110),
-(206, 'Helley', 'Alex', 'he@gmail.com', '515.123.8050', '2007-06-13', 'AC_MGR', 12000.00, NULL, 102, 110),
-(207, 'Kelvin', 'Clein', 'k@gmail.com', '650.126.5234', '2012-01-15', 'ST_MAN', 5800.00, NULL, 207, 50),
-(208, 'Jenny', 'Whalem', 'JWHAL', '515.193.4444', '2003-09-17', 'AD_ASST', 4400.00, NULL, 106, 10),
-(209, 'Micky', 'Hartstein', 'MHARS', '515.123.5955', '2008-02-17', 'MK_MAN', 13000.00, NULL, 190, 20),
-(210, 'Pat', 'Anderson', 'PAY', '683.123.6666', '2010-08-19', 'MK_REP', 6000.00, NULL, 204, 20),
-(211, 'Shell', 'Higgins', 'SHI', '515.223.8050', '2007-05-17', 'AC_MGR', 12000.00, NULL, 131, 110),
-(212, 'Helley', 'Shah', 'hs@gmail.com', '585.123.8050', '2007-06-13', 'AC_MGR', 12000.00, NULL, 167, 110),
-(213, 'Patfg', 'Abhnderson', 'BHPAY', '686.123.6666', '2010-08-19', 'MK_REP', 6000.00, NULL, 224, 20),
-(214, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'AC_MGR', 12000.00, NULL, 139, 110),
-(215, 'Halsey', 'Shah', 'has@gmail.com', '585.129.8050', '2017-06-13', 'AC_MGR', 12000.00, NULL, 890, 110),
-(216, 'Sabby', 'Higgins', 'SABBY', '595.223.8050', '2007-09-17', 'AC_MGR', 12000.00, NULL, 133, 110),
-(217, 'Sasha', 'Shah', 'ss@gmail.com', '585.123.8150', '2007-06-23', 'AC_MGR', 12000.00, NULL, 197, 110),
-(218, 'Paffy', 'Abhnderson', 'PFPAY', '606.123.6666', '2011-08-19', 'MK_REP', 6000.00, NULL, 824, 20),
-(219, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'AC_MGR', 12000.00, NULL, 139, 110),
-(220, 'Halsey', 'Soozy', 'zas@gmail.com', '589.129.8050', '2017-06-13', 'AC_MGR', 12000.00, NULL, 290, 110),
-(208, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'AC_ACCOUNT', 8300.00, NULL, 205, 110);
+INSERT INTO `user` (`user_Id`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Add_Date`, `city`) VALUES
+(100, 'Steven', 'King', 'SKING', '515.123.4567', '2006-06-17', 'Dhaka'),
+(101, 'Neena', 'Kochar', 'NKOCHAR', '515.123.4568', '2008-09-21', 'Bogura'),
+(102, 'Lex', 'De Haan', 'DEHAAN', '515.123.4569', '2009-01-13', 'Dhaka'),
+(103, 'Alexander', 'Hunold', 'AHUNOLD', '590.423.4567', '2008-01-03', 'noakhali'),
+(104, 'Bruce', 'Ernst', 'BERNST', '590.423.4568', '2009-05-21', 'barishal'),
+(107, 'Diana', 'Lorentz', 'DLORENTZ', '590.423.5567', '2008-02-07', 'Borguna'),
+(124, 'Kevin', 'Mourgos', 'KMORGOS', '650.123.5234', '2012-11-16', 'Faridpur'),
+(141, 'Treena', 'Rajs', 'RRAJS', '650.121.5234', '2004-10-17', 'Jossore'),
+(142, 'Curtis', 'Davies', 'CDAVIES', '121.123.5234', '2007-01-29', 'Jhinaidah'),
+(143, 'Randall', 'Matos', 'RMATOS', '121.123.5234', '2008-03-15', 'Gaibandha'),
+(144, 'Peter', 'Vargas', 'PVARGAS', '121.123.5234', '2008-07-09', 'Rangpur'),
+(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '44.1344.429018', '2014-01-29', 'Dinajjpur'),
+(174, 'Ellen', 'Abel', 'EABEL', '44.1644.429017', '2004-05-11', 'Sirajganj'),
+(176, 'Jnathon', 'Taylor', 'JTAILOR', '44.1644.429021', '2008-03-24', 'Panchagar'),
+(178, 'Kimberely', 'Grant', 'KGRANT', '44.1644.429023', '2009-05-29', 'Dhaka'),
+(200, 'Jennifer', 'Whalem', 'JWHALEN', '515.123.4444', '2003-09-17', 'Rajshahi'),
+(201, 'Michael', 'Hartstein', 'MHARSTEIN', '515.123.5555', '2008-02-17', 'Bandra'),
+(202, 'Pat', 'Fay', 'PFAY', '603.123.6666', '2010-08-17', 'Lahore'),
+(205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8050', '2007-06-17', 'kualalampur'),
+(206, 'Helley', 'Alex', 'he@gmail.com', '515.123.8050', '2007-06-13', 'mali'),
+(207, 'Kelvin', 'Clein', 'k@gmail.com', '650.126.5234', '2012-01-15', 'Dhaka'),
+(208, 'Jenny', 'Whalem', 'JWHAL', '515.193.4444', '2003-09-17', 'Bogura'),
+(209, 'Micky', 'Hartstein', 'MHARS', '515.123.5955', '2008-02-17', 'Rajbari'),
+(210, 'Pat', 'Anderson', 'PAY', '683.123.6666', '2010-08-19', 'Rajbari'),
+(211, 'Shell', 'Higgins', 'SHI', '515.223.8050', '2007-05-17', 'Cumilla'),
+(212, 'Helley', 'Shah', 'hs@gmail.com', '585.123.8050', '2007-06-13', 'Jassore'),
+(213, 'Patfg', 'Abhnderson', 'BHPAY', '686.123.6666', '2010-08-19', 'Dhaka'),
+(214, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Bogura'),
+(215, 'Halsey', 'Shah', 'has@gmail.com', '585.129.8050', '2017-06-13', 'Rajshahi'),
+(216, 'Sabby', 'Higgins', 'SABBY', '595.223.8050', '2007-09-17', 'Rangpur'),
+(217, 'Sasha', 'Shah', 'ss@gmail.com', '585.123.8150', '2007-06-23', 'Feni'),
+(218, 'Paffy', 'Abhnderson', 'PFPAY', '606.123.6666', '2011-08-19', 'Faridabad'),
+(219, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Jossore'),
+(220, 'Halsey', 'Soozy', 'zas@gmail.com', '589.129.8050', '2017-06-13', 'Rajbari'),
+(208, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'Coxs Bazar');
 -- --------------------------------------------------------
 
 --
@@ -400,10 +397,10 @@ ALTER TABLE `customer`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `employees`
+-- Indexes for table `user`
 --
-ALTER TABLE `employees`
-  ADD PRIMARY KEY (`Employee_Id`);
+ALTER TABLE `user`
+  ADD PRIMARY KEY (`user_Id`);
 
 --
 -- Indexes for table `productlist`
@@ -436,8 +433,8 @@ ALTER TABLE `customer`
   MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=60;
 
 --
--- AUTO_INCREMENT for table `employees`
+-- AUTO_INCREMENT for table `user`
 --
-ALTER TABLE `employees`
-  MODIFY `Employee_Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+ALTER TABLE `user`
+  MODIFY `user_Id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 COMMIT;
