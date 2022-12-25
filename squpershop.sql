@@ -225,18 +225,18 @@ INSERT INTO `productlist` (`p_id`, `P_name`, `category`, `p_price`, `p_unit`, `s
 
 -- --------------------------------------------------------
 --
--- Table structure for table `sign_up`
+-- Table structure for table `order`
 --
 
 CREATE TABLE `order` (
-  `id` int(5) NOT NUL
-  `order_ID` int(20) NOT NULL,
+  `id` int(5) NOT NULL,
+  `order_ID` int(6) NOT NULL,
   `delivery_Date` date NOT NULL,
-  `payment method` varchar(25) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+  `payment method` varchar(10) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `sign_up`
+-- Dumping data for table `order`
 --
 
 INSERT INTO `order` (`id`, `order_ID`, `delivery_Date`, `payment method`) VALUES
@@ -392,7 +392,7 @@ INSERT INTO `order` (`id`, `order_ID`, `delivery_Date`, `payment method`) VALUES
 ('350', 304692, '2022-01-20', 'bkash'),
 ('351', 304693, '2022-01-20', 'nagad');
 --
-
+-- --------------------------------------------------------
 --
 -- Indexes for table `customer`
 --
