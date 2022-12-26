@@ -6,7 +6,8 @@ require_once('connection.php');
 
 //code for connecting next page
 session_start ();
-
+ $l= $_POST['log_name'];
+ echo $l ;
 
       if(isset($_POST['click']))
       {

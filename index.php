@@ -70,7 +70,7 @@
             <h2>Wear your <span>best</span> <br> version</h2>
             <h6>From waste to wear, our innovative clothing features recycled fabrics</h6>
             <p>Save more with coupons & upto 50% off</p>
-            <button>Shop now</button>
+            <button onclick="window.location='shop.php'">Shop now</button>
 
         </section>
     </div>
