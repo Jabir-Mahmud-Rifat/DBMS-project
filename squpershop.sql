@@ -39,6 +39,35 @@ INSERT INTO `account` (`username`, `password`, `email`) VALUES
 ('king', ' 123ert', ' srk00@gmail.com');
 
 -- --------------------------------------------------------
+
+--
+
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` varchar(40) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`,`username`, `password`, `email`) VALUES
+(' 01 ','rakib', ' shakib ', '25f9e794323b453885f5181f1b624d'),
+(' 02 ','SHAKIB', ' shakib75@gmail.com', 'd3c4fb694484de76fc00096d34a64b'),
+(' 03 ','MESSI', '1f42d189bd95aa44423e0263de1908d4', ' messi2022@gmail.com'),
+(' 04 ','CR7', ' 12345', ' cr7@gmail.com'),
+(' 05 ','vvjhvjhvj', ' 12335454', ' hfhjhj@gmail.com'),
+(' 06 ','varun', ' 12345678tr', ' varun75@gmail.com'),
+(' 07 ','king', ' 123ert', ' srk00@gmail.com'),
+(' 08 ','king', ' 123ert', ' srk00@gmail.com');
+
+-- --------------------------------------------------------
+
 --
 -- Table structure for table `Billing info(users)`
 --
@@ -111,8 +140,7 @@ INSERT INTO `category` (`Category_id`, `Category name`, `Description`) VALUES
 ('02', ' PANT ' ,'JEANS'),
 ('03', ' SHOE ' ,'LEATHER'),
 ('04', ' JACKET ' ,'LEATHER'),
-('05', ' T-SHIRT ' ,'COTTON'),
-('06', ' SHIRT', 'WOOL');
+('05', ' SHIRT', 'WOOL');
 
 -- --------------------------------------------------------
 --
@@ -132,47 +160,8 @@ CREATE TABLE `cart` (
 --
 
 INSERT INTO `cart` (`user_Id`, `product_id`, `price`,`quantity`) VALUES
-('1', ' 05 ' ,'105','1'),
-('2', ' 05 ' ,'105','1'),
-('3', ' 06 ' ,'109','1'),
-('4', ' 05 ' ,'105','1'),
-('5', ' 05 ' ,'105','1'),
-('6', ' 03 ' ,'110','1'),
-('7', ' 03 ' ,'110','1'),
-('8', ' 01 ' ,'10','5'),
-('9', ' 01 ' ,'10','5'),
-('10', ' 06 ' ,'109','11'),
-('11', ' 01 ' ,'10','11'),
-('12', ' 01 ' ,'10','1'),
-('13', ' 02 ' ,'120','1'),
-('14', ' 03 ' ,'110','1'),
-('15', ' 01 ' ,'10','12'),
-('16', ' 02 ' ,'120','2'),
-('17', ' 03 ' ,'110','1'),
-('18', ' 01 ' ,'10','5'),
-('19', ' 05 ' ,'105','1'),
-('20', ' 05 ' ,'105','1'),
-('21', ' 01 ' ,'10','11'),
-('22', ' 01 ' ,'10','1'),
-('23', ' 02 ' ,'120','1'),
-('24', ' 03 ' ,'110','1'),
-('25', ' 01 ' ,'10','12'),
-('26', ' 02 ' ,'120','2'),
-('27', ' 03 ' ,'110','1'),
-('28', ' 01 ' ,'10','5'),
-('29', ' 05 ' ,'105','1'),
-('30', ' 06 ' ,'109','11'),
-('31', ' 01 ' ,'10','11'),
-('32', ' 01 ' ,'10','1'),
-('33', ' 02 ' ,'120','1'),
-('34', ' 03 ' ,'110','1'),
-('35', ' 01 ' ,'10','12'),
-('36', ' 02 ' ,'120','2'),
-('37', ' 03 ' ,'110','1'),
-('38', ' 01 ' ,'10','5'),
-('39', ' 05 ' ,'105','1'),
-('40', ' 05 ' ,'105','1');
-
+('01', ' 01 ' ,'10','11'),
+('02', ' 01 ' ,'10','12');
 
 -- --------------------------------------------------------
 --
@@ -551,6 +540,14 @@ ALTER TABLE `account`
 
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+
+--
+
 --
 -- Indexes for table `account`
 --
