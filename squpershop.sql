@@ -40,7 +40,32 @@ INSERT INTO `account` (`username`, `password`, `email`) VALUES
 
 -- --------------------------------------------------------
 --
+-- Table structure for table `Billing info(users)`
+--
 
+CREATE TABLE `Billing info(users)` (
+  `Billing address` varchar(40) NOT NULL,
+  `billing_id` varchar(40) NOT NULL,
+  `creditcard_id` int(10) NOT NULL,
+  `card number` int(10) NOT NULL,
+  `pin` int(5) NOT NULL,
+  `user_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Billing info(users)`
+--
+
+INSERT INTO `Billing info(users)` (`Billing address`, `billing_id`, `creditcard_id`,`card number`,`pin`,`user_id`) VALUES
+('Dhaka', ' 101 ', '456789','223145','1234','01'),
+('Dhaka', ' 102', '456788','22564','1234','02'),
+('Bogura', ' 103 ', '456777','223150','1234','03'),
+('Rajshahi', ' 104', '456756','22577','1234','04'),
+('Jossore', ' 105 ', '456745','223196','1234','05'),
+('Rajbari', ' 106', '456221','22500','1234','06');
+
+-- --------------------------------------------------------
+--
 -- Table structure for table `category`
 --
 
@@ -415,6 +440,12 @@ ALTER TABLE `customer`
 --
 ALTER TABLE `user`
   ADD PRIMARY KEY (`user_Id`);
+
+--
+-- Indexes for table `user`
+--
+ALTER TABLE `Billing info(users)`
+  ADD PRIMARY KEY (`billing_id`);
 
 --
 -- Indexes for table `cart`
