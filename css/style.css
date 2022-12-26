@@ -441,3 +441,85 @@ footer h6{
     cursor: pointer;
     transition: .5s;
 }
+
+.product-details{
+    padding: 40px 80px;
+}
+
+.product-details .single-pro-image{
+    width: 40%;
+    margin-right: 50px;
+}
+
+.sml-img-grp{
+    display: flex;
+    justify-content: space-between;
+}
+
+.sml-img-col{
+    flex-basis: 32.5%;
+
+}
+
+.product-details{
+    display: flex;
+    margin-top: 20px;
+}
+
+.product-details .single-pro-details{
+    width: 50%;
+    padding-top: 30px;
+}
+
+.product-details .single-pro-details h2{
+    padding: 10px 0px;
+}
+
+.product-details .single-pro-details span{
+    color: aquamarine;
+}
+
+.product-details .single-pro-details select{
+    display: block;
+    padding: 5px 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    color: white;
+    background-color: rgb(45, 45, 45);
+}
+
+.product-details .single-pro-details input{
+    width: 50px;
+    height: 50px;
+    padding-left: 10px;
+    font-size: 15px;
+    margin-right: 10px;
+    color: white;
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 10px;
+}
+
+.product-details .single-pro-details button{
+    color: rgb(252, 252, 252);
+    border: 2px solid rgb(42, 39, 39);
+    background-color: rgb(35, 32, 32);
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 18px;
+    text-transform: capitalize;
+    padding: 12px 24px;
+    border-radius: 10px;
+    transition: 0.5s;
+    margin-top: 10px;
+}
+
+.product-details .single-pro-details h4{
+    font-size: 24px;
+    padding: 20px 0px;
+}
+
+.product-details .single-pro-details h5{
+    color: rgb(146, 146, 146);
+    font-weight: 500;
+}
