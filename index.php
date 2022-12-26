@@ -305,6 +305,21 @@
             <button>Learn More</button>
         </div>
     </section>
+
+    <!-- footer section -->
+    <footer>
+        <h3>Retail Club</h3>
+        <p>For more information on us,<br> please follow the links below</p>
+
+        <div class="socials">
+            <a href="#" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#"><i class="fa-brands fa-behance" target="_blank"></i></a>
+            <a href="#"><i class="fa-brands fa-artstation" target="_blank"></i></a>
+        </div>
+
+        <h6>© 2022 Retail Club - All Rights Reserved</h6>
+    </footer>
     
 </body>
 </html>
