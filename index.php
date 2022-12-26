@@ -53,7 +53,7 @@
 
                     <ul class="nav-list">
                         <li class="nav-item">
-                            <a href="index.php" class="login-btn" id="login-btn"><i class="fa-solid fa-user"></i></a>
+                            <a href="login and signup.php" class="login-btn"  id="login-btn"><i class="fa-solid fa-user"></i></a>
                         </li>
 
                         <li class="nav-item">
