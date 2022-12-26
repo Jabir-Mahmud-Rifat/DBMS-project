@@ -1,50 +1,32 @@
+
 <?php
-
-    
-require_once('connection.php');
-
-//code for connecting next page
-session_start ();
-
-
-      if(isset($_POST['click']))
-      {
-        // echo 'WELCOME HOME BABY';
-        $username =  mysqli_real_escape_string($conn,$_POST['log_name']); 
-        $password  = mysqli_real_escape_string($conn,$_POST['log_pass']); 
-
-
-        if(empty($username)|| empty($password)){
-
-           echo " please fill in the blanks  ";
-
-        }
-        else
-        {
-          $query = "select * from  account where username ='$username'";
-          $result = mysqli_query($conn, $query);
-           
-          if($row=mysqli_fetch_assoc($result))
-            {
-               $db_pass= $row ['log_pass'];
-               
-               if(md5( $password )==$db_pass)
-               {
-                header('location:index.php') ;
-               }
-               else{
+   include("connection.php");
+   session_start();
    
-                echo "Incorrect password" ;
-               }
-
-            }
-
-            else {
-              echo'Please check your query';
-           }
-        }
-
-
+   if($_SERVER["REQUEST_METHOD"] == "POST") {
+      // username and password sent from form 
+      
+      $myusername = mysqli_real_escape_string($conn,$_POST['log_name']);
+      $mypassword = mysqli_real_escape_string($conn,$_POST['log_pass']); 
+      
+      $sql = "SELECT * FROM account WHERE username = '$myusername' and passcode = '$mypassword'";
+      $result = mysqli_query($sql,$conn);
+      $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
+      $active = $row['active'];
+      
+      $count = mysqli_num_rows($result);
+      
+      // If result matched $myusername and $mypassword, table row must be 1 row
+		
+      if($count == 1) {
+         session_register("myusername");
+         $_SESSION['login_user'] = $myusername;
+         
+         header("location: index.php");
+      }else {
+         $error = "Your Login Name or Password is invalid";
       }
-  
+   }
 ?>
+  
+
