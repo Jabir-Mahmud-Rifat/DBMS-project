@@ -39,8 +39,89 @@ INSERT INTO `account` (`username`, `password`, `email`) VALUES
 ('king', ' 123ert', ' srk00@gmail.com');
 
 -- --------------------------------------------------------
+
 --
 
+-- Table structure for table `admin`
+--
+
+CREATE TABLE `admin` (
+  `admin_id` varchar(40) NOT NULL,
+  `username` varchar(40) NOT NULL,
+  `password` varchar(40) NOT NULL,
+  `email` varchar(30) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data for table `admin`
+--
+
+INSERT INTO `admin` (`admin_id`,`username`, `password`, `email`) VALUES
+(' 01 ','rakib', ' shakib ', '25f9e794323b453885f5181f1b624d'),
+(' 02 ','SHAKIB', ' shakib75@gmail.com', 'd3c4fb694484de76fc00096d34a64b'),
+(' 03 ','MESSI', '1f42d189bd95aa44423e0263de1908d4', ' messi2022@gmail.com'),
+(' 04 ','CR7', ' 12345', ' cr7@gmail.com'),
+(' 05 ','vvjhvjhvj', ' 12335454', ' hfhjhj@gmail.com'),
+(' 06 ','varun', ' 12345678tr', ' varun75@gmail.com'),
+(' 07 ','king', ' 123ert', ' srk00@gmail.com'),
+(' 08 ','king', ' 123ert', ' srk00@gmail.com');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Billing info(users)`
+--
+
+CREATE TABLE `Billing info(users)` (
+  `Billing address` varchar(40) NOT NULL,
+  `billing_id` varchar(40) NOT NULL,
+  `creditcard_id` int(10) NOT NULL,
+  `card number` int(10) NOT NULL,
+  `pin` int(5) NOT NULL,
+  `user_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Billing info(users)`
+--
+
+INSERT INTO `Billing info(users)` (`Billing address`, `billing_id`, `creditcard_id`,`card number`,`pin`,`user_id`) VALUES
+('Dhaka', ' 101 ', '456789','223145','1234','01'),
+('Dhaka', ' 102', '456788','22564','1234','02'),
+('Bogura', ' 103 ', '456777','223150','1234','03'),
+('Rajshahi', ' 104', '456756','22577','1234','04'),
+('Jossore', ' 105 ', '456745','223196','1234','05'),
+('Rajbari', ' 106', '456221','22500','1234','06');
+
+-- --------------------------------------------------------
+--
+-- Table structure for table `Billing info(orders)`
+--
+
+CREATE TABLE `Billing info(orders)` (
+  `Billing address` varchar(40) NOT NULL,
+  `billing_id` varchar(40) NOT NULL,
+  `creditcard_id` int(10) NOT NULL,
+  `card number` int(10) NOT NULL,
+  `pin` int(5) NOT NULL,
+  `user_id` int(5) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `Billing info(orders)`
+--
+
+INSERT INTO `Billing info(orders)` (`Billing address`, `billing_id`, `creditcard_id`,`card number`,`pin`,`user_id`) VALUES
+('Dhaka', ' 101 ', '456789','223145','1234','01'),
+('Dhaka', ' 102', '456788','22564','1234','02'),
+('Bogura', ' 103 ', '456777','223150','1234','03'),
+('Rajshahi', ' 104', '456756','22577','1234','04'),
+('Jossore', ' 105 ', '456745','223196','1234','05'),
+('Rajbari', ' 106', '456221','22500','1234','06');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `category`
 --
 
@@ -158,7 +239,8 @@ CREATE TABLE `user` (
   `Email` varchar(25) NOT NULL,
   `Phone_Number` varchar(15) NOT NULL,
   `Add_Date` date NOT NULL,
-  `city` varchar(25) NOT NULL
+  `city` varchar(25) NOT NULL,
+  `country` varchar(25) NOT NULL
 
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -166,42 +248,41 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`user_Id`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Add_Date`, `city`) VALUES
-(100, 'Steven', 'King', 'SKING', '515.123.4567', '2006-06-17', 'Dhaka'),
-(101, 'Neena', 'Kochar', 'NKOCHAR', '515.123.4568', '2008-09-21', 'Bogura'),
-(102, 'Lex', 'De Haan', 'DEHAAN', '515.123.4569', '2009-01-13', 'Dhaka'),
-(103, 'Alexander', 'Hunold', 'AHUNOLD', '590.423.4567', '2008-01-03', 'noakhali'),
-(104, 'Bruce', 'Ernst', 'BERNST', '590.423.4568', '2009-05-21', 'barishal'),
-(107, 'Diana', 'Lorentz', 'DLORENTZ', '590.423.5567', '2008-02-07', 'Borguna'),
-(124, 'Kevin', 'Mourgos', 'KMORGOS', '650.123.5234', '2012-11-16', 'Faridpur'),
-(141, 'Treena', 'Rajs', 'RRAJS', '650.121.5234', '2004-10-17', 'Jossore'),
-(142, 'Curtis', 'Davies', 'CDAVIES', '121.123.5234', '2007-01-29', 'Jhinaidah'),
-(143, 'Randall', 'Matos', 'RMATOS', '121.123.5234', '2008-03-15', 'Gaibandha'),
-(144, 'Peter', 'Vargas', 'PVARGAS', '121.123.5234', '2008-07-09', 'Rangpur'),
-(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '44.1344.429018', '2014-01-29', 'Dinajjpur'),
-(174, 'Ellen', 'Abel', 'EABEL', '44.1644.429017', '2004-05-11', 'Sirajganj'),
-(176, 'Jnathon', 'Taylor', 'JTAILOR', '44.1644.429021', '2008-03-24', 'Panchagar'),
-(178, 'Kimberely', 'Grant', 'KGRANT', '44.1644.429023', '2009-05-29', 'Dhaka'),
-(200, 'Jennifer', 'Whalem', 'JWHALEN', '515.123.4444', '2003-09-17', 'Rajshahi'),
-(201, 'Michael', 'Hartstein', 'MHARSTEIN', '515.123.5555', '2008-02-17', 'Bandra'),
-(202, 'Pat', 'Fay', 'PFAY', '603.123.6666', '2010-08-17', 'Lahore'),
-(205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8050', '2007-06-17', 'kualalampur'),
-(206, 'Helley', 'Alex', 'he@gmail.com', '515.123.8050', '2007-06-13', 'mali'),
-(207, 'Kelvin', 'Clein', 'k@gmail.com', '650.126.5234', '2012-01-15', 'Dhaka'),
-(208, 'Jenny', 'Whalem', 'JWHAL', '515.193.4444', '2003-09-17', 'Bogura'),
-(209, 'Micky', 'Hartstein', 'MHARS', '515.123.5955', '2008-02-17', 'Rajbari'),
-(210, 'Pat', 'Anderson', 'PAY', '683.123.6666', '2010-08-19', 'Rajbari'),
-(211, 'Shell', 'Higgins', 'SHI', '515.223.8050', '2007-05-17', 'Cumilla'),
-(212, 'Helley', 'Shah', 'hs@gmail.com', '585.123.8050', '2007-06-13', 'Jassore'),
-(213, 'Patfg', 'Abhnderson', 'BHPAY', '686.123.6666', '2010-08-19', 'Dhaka'),
-(214, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Bogura'),
-(215, 'Halsey', 'Shah', 'has@gmail.com', '585.129.8050', '2017-06-13', 'Rajshahi'),
-(216, 'Sabby', 'Higgins', 'SABBY', '595.223.8050', '2007-09-17', 'Rangpur'),
-(217, 'Sasha', 'Shah', 'ss@gmail.com', '585.123.8150', '2007-06-23', 'Feni'),
-(218, 'Paffy', 'Abhnderson', 'PFPAY', '606.123.6666', '2011-08-19', 'Faridabad'),
-(219, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Jossore'),
-(220, 'Halsey', 'Soozy', 'zas@gmail.com', '589.129.8050', '2017-06-13', 'Rajbari'),
-(208, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'Coxs Bazar');
+INSERT INTO `user` (`user_Id`, `First_Name`, `Last_Name`, `Email`, `Phone_Number`, `Add_Date`, `city`,`country`) VALUES
+(100, 'Steven', 'King', 'SKING', '515.123.4567', '2006-06-17', 'Dhaka','Bangladesh'),
+(101, 'Neena', 'Kochar', 'NKOCHAR', '515.123.4568', '2008-09-21', 'Bogura','Bangladesh'),
+(102, 'Lex', 'De Haan', 'DEHAAN', '515.123.4569', '2009-01-13', 'Dhaka','Bangladesh'),
+(103, 'Alexander', 'Hunold', 'AHUNOLD', '590.423.4567', '2008-01-03', 'noakhali','Bangladesh'),
+(104, 'Bruce', 'Ernst', 'BERNST', '590.423.4568', '2009-05-21', 'barishal','Bangladesh'),
+(107, 'Diana', 'Lorentz', 'DLORENTZ', '590.423.5567', '2008-02-07', 'Borguna','Bangladesh'),
+(124, 'Kevin', 'Mourgos', 'KMORGOS', '650.123.5234', '2012-11-16', 'Faridpur','Bangladesh'),
+(141, 'Treena', 'Rajs', 'RRAJS', '650.121.5234', '2004-10-17', 'Jossore','Bangladesh'),
+(142, 'Curtis', 'Davies', 'CDAVIES', '121.123.5234', '2007-01-29', 'Jhinaidah','Bangladesh'),
+(144, 'Peter', 'Vargas', 'PVARGAS', '121.123.5234', '2008-07-09', 'Rangpur','Bangladesh'),
+(149, 'Eleni', 'Zlotkey', 'EZLOTKEY', '44.1344.429018', '2014-01-29', 'Dinajjpur','Bangladesh'),
+(174, 'Ellen', 'Abel', 'EABEL', '44.1644.429017', '2004-05-11', 'Sirajganj','Bangladesh'),
+(176, 'Jnathon', 'Taylor', 'JTAILOR', '44.1644.429021', '2008-03-24', 'Panchagar','Bangladesh'),
+(178, 'Kimberely', 'Grant', 'KGRANT', '44.1644.429023', '2009-05-29', 'Dhaka','Bangladesh'),
+(200, 'Jennifer', 'Whalem', 'JWHALEN', '515.123.4444', '2003-09-17', 'Rajshahi','Bangladesh'),
+(201, 'Michael', 'Hartstein', 'MHARSTEIN', '515.123.5555', '2008-02-17', 'Bandra','Bangladesh'),
+(202, 'Pat', 'Fay', 'PFAY', '603.123.6666', '2010-08-17', 'Lahore','Bangladesh'),
+(205, 'Shelley', 'Higgins', 'SHIGGINS', '515.123.8050', '2007-06-17', 'kualalampur','Bangladesh'),
+(206, 'Helley', 'Alex', 'he@gmail.com', '515.123.8050', '2007-06-13', 'mali','Bangladesh'),
+(207, 'Kelvin', 'Clein', 'k@gmail.com', '650.126.5234', '2012-01-15', 'Dhaka','Bangladesh'),
+(208, 'Jenny', 'Whalem', 'JWHAL', '515.193.4444', '2003-09-17', 'Bogura','Bangladesh'),
+(209, 'Micky', 'Hartstein', 'MHARS', '515.123.5955', '2008-02-17', 'Rajbari','Bangladesh'),
+(210, 'Pat', 'Anderson', 'PAY', '683.123.6666', '2010-08-19', 'Rajbari','Bangladesh'),
+(211, 'Shell', 'Higgins', 'SHI', '515.223.8050', '2007-05-17', 'Cumilla','Bangladesh'),
+(212, 'Helley', 'Shah', 'hs@gmail.com', '585.123.8050', '2007-06-13', 'Jassore','Bangladesh'),
+(213, 'Patfg', 'Abhnderson', 'BHPAY', '686.123.6666', '2010-08-19', 'Dhaka','Bangladesh'),
+(214, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Bogura','Bangladesh'),
+(215, 'Halsey', 'Shah', 'has@gmail.com', '585.129.8050', '2017-06-13', 'Rajshahi','Bangladesh'),
+(216, 'Sabby', 'Higgins', 'SABBY', '595.223.8050', '2007-09-17', 'Rangpur','Bangladesh'),
+(217, 'Sasha', 'Shah', 'ss@gmail.com', '585.123.8150', '2007-06-23', 'Feni','Bangladesh'),
+(218, 'Paffy', 'Abhnderson', 'PFPAY', '606.123.6666', '2011-08-19', 'Faridabad','Bangladesh'),
+(219, 'Susen', 'Higgins', 'Suuu', '517.223.8050', '2007-05-14', 'Jossore','Bangladesh'),
+(220, 'Halsey', 'Soozy', 'zas@gmail.com', '589.129.8050', '2017-06-13', 'Rajbari','Bangladesh'),
+(208, 'William', 'Gietz', 'WGIETZ', '515.123.8181', '2007-06-07', 'Coxs Bazar','Bangladesh');
 -- --------------------------------------------------------
 
 --
@@ -417,6 +498,20 @@ ALTER TABLE `user`
   ADD PRIMARY KEY (`user_Id`);
 
 --
+-- Indexes for table `Billing info(users)`
+--
+ALTER TABLE `Billing info(users)`
+  ADD PRIMARY KEY (`billing_id`);
+
+--
+
+-- Indexes for table `Billing info(orders)`
+--
+ALTER TABLE `Billing info(orders)`
+  ADD PRIMARY KEY (`billing_id`);
+
+--
+
 -- Indexes for table `cart`
 --
 ALTER TABLE `cart`
@@ -445,6 +540,14 @@ ALTER TABLE `account`
 
 
 --
+-- Indexes for table `admin`
+--
+ALTER TABLE `admin`
+  ADD PRIMARY KEY (`admin_id`);
+
+
+--
+
 --
 -- Indexes for table `account`
 --
