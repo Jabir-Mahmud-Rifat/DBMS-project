@@ -14,8 +14,8 @@ session_start ();
          $username =  mysqli_real_escape_string($conn,$_POST['name']); 
          $password  = mysqli_real_escape_string($conn,$_POST['data']);
 
-        echo $password;
-        echo $username;
+        //echo $password;
+        //echo $username;
 
         if(empty($username)|| empty($password)){
 
@@ -26,12 +26,12 @@ session_start ();
         {
           $query = "select username, password from account where username ='$username'";
           $result = mysqli_query($conn, $query);
+
+          $row = mysqli_fetch_assoc($result);
            
-          if($row = mysqli_fetch_assoc($result))
+          if(mysqli_num_rows($result) > 0)
             {
-               $db_pass = $row["password"];
-               
-               if($password == $db_pass)
+               if($password == $row["password"])
                {
                 header('location:index.php') ;
                }
@@ -43,7 +43,7 @@ session_start ();
             }
 
             else {
-              echo'Please check your query';
+              echo'username not registered';
            }
         }
          }
