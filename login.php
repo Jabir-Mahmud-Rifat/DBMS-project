@@ -31,12 +31,13 @@ session_start ();
            
           if(mysqli_num_rows($result) > 0)
             {
-               if($password == $row["password"])
+               if(strcmp($password, $row["password"]) != 0)
                {
                 header('location:index.php') ;
                }
                else{
-   
+                  echo $row["password"];
+                  echo $password;
                 echo "Incorrect password" ;
                }
 
