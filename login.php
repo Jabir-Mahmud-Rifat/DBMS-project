@@ -6,15 +6,16 @@ require_once('connection.php');
 
 //code for connecting next page
 session_start ();
- $l= $_POST['log_name'];
- echo $l ;
 
       if(isset($_POST['click']))
       {
-        // echo 'WELCOME HOME BABY';
-        $username =  mysqli_real_escape_string($conn,$_POST['log_name']); 
-        $password  = mysqli_real_escape_string($conn,$_POST['log_pass']); 
+            // echo 'WELCOME HOME BABY';
 
+         $username =  mysqli_real_escape_string($conn,$_POST['name']); 
+         $password  = mysqli_real_escape_string($conn,$_POST['data']);
+
+        echo $password;
+        echo $username;
 
         if(empty($username)|| empty($password)){
 
@@ -23,14 +24,14 @@ session_start ();
         }
         else
         {
-          $query = "select * from  account where username ='$username'";
+          $query = "select username, password from account where username ='$username'";
           $result = mysqli_query($conn, $query);
            
-          if($row=mysqli_fetch_assoc($result))
+          if($row = mysqli_fetch_assoc($result))
             {
-               $db_pass= $row ['log_pass'];
+               $db_pass = $row["password"];
                
-               if(md5( $password )==$db_pass)
+               if($password == $db_pass)
                {
                 header('location:index.php') ;
                }
@@ -45,9 +46,11 @@ session_start ();
               echo'Please check your query';
            }
         }
+         }
+        
 
 
-      }
+      
   
 ?>
 
