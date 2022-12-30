@@ -22,17 +22,25 @@
         <div class="forms-container">
             <div class="login-signup">
  <!-- logib page -->
-                <form action=" login.php" class="sign-in-form" method = "post"  onsubmit = " return isvalid() ">
+                <form action="login.php" class="sign-in-form" method = "POST">
                     <h2 class="title">Sign in</h2>
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
+<<<<<<< HEAD
                         <input type="text" placeholder="Username" name= "log_name"  >
+=======
+                        <input type="text" placeholder="Username" name= "name" id="log_name">
+>>>>>>> 707b64e817b924557ef17a19b292e461b4ebee67
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
+<<<<<<< HEAD
                         <input type="password" placeholder="Password" name = "log_pass"  >
+=======
+                        <input type="password" placeholder="Password" name = "data" id="log_pass">
+>>>>>>> 707b64e817b924557ef17a19b292e461b4ebee67
                     </div>
                   
     
@@ -57,7 +65,7 @@
                     </div>
                 </form>
     <!--signup pagae -->
-                <form action="signup.php" class="sign-up-form" method= "post" autocomplete = "off">
+                <form action="signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
                     <div class="input-field">

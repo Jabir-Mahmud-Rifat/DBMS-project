@@ -153,7 +153,7 @@ input{
 }
 
 
-/* navbar */
+/* Main and Hero Section */
 .self{
     background-image: url("https://i.ibb.co/KN66CVy/enchanting-girl-with-dark-curly-hair-fooling-around-outdoor-warm-summer-day-amazing-ginger-female-mo.jpg");
     height: 100vh;
@@ -218,6 +218,8 @@ input{
     border-radius: 10px;
     transition: transform 0.5s;
 }
+
+/* Featured Products */
 
 .feature-product{
     text-align: center;
@@ -292,6 +294,8 @@ input{
     flex-wrap: wrap;
 }
 
+/* Banner Section */
+
 .banner{
     padding: 40px 0px;
     display: flex;
@@ -326,6 +330,8 @@ input{
     border-radius: 10px;
     transition: 0.5s;
 }
+
+/* Small Banner Section */
 
 .sm-banner .banner-box{
     text-align: start;
@@ -378,6 +384,8 @@ input{
     border-radius: 20px;
 }
 
+/* Footer Section */
+
 footer{
     position: relative;
     width: 100%;
@@ -408,12 +416,14 @@ footer p{
 }
 
 footer h6{
-    color: rgb(172, 88, 187);
+    color: rgb(206, 179, 97);
     font-size: 12px;
     font-weight: 500;
     text-align: center;
     margin: 20px;
 }
+
+/* Footer Socials */
 
 .socials{
     display: flex;
@@ -427,7 +437,7 @@ footer h6{
     align-items: center;
     justify-content: center;
     text-decoration: none;
-    background-color: rgb(0, 255, 132);
+    background-color: rgb(203, 139, 0);
     border-radius: 30px;
     margin: 10px 10px;
     color: white;
@@ -436,7 +446,7 @@ footer h6{
 
 .socials a:hover{
     transform: scale(1.1);
-    background-color: rgb(74, 120, 0);
+    background-color: rgb(120, 92, 0);
     border: 2px solid rgb(238, 255, 0);
     cursor: pointer;
     transition: .5s;
@@ -460,6 +470,8 @@ footer h6{
     flex-basis: 32.5%;
 
 }
+
+/* Product Page */
 
 .product-details{
     display: flex;
