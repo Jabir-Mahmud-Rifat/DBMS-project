@@ -31,7 +31,7 @@ session_start ();
            
           if(mysqli_num_rows($result) > 0)
             {
-               if(strcmp($password, $row["password"]) != 0)
+               if($password == $row["password"])
                {
                 header('location:index.php') ;
                }
