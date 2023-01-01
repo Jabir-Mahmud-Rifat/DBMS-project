@@ -1,7 +1,6 @@
-
 <?php
 
-  include ("connection.php");   // connecting  database 
+  include 'connection.php'; // connecting  database 
 
 ?>
 
@@ -25,18 +24,28 @@
                 <form action="login.php" class="sign-in-form" method = "POST">
                     <h2 class="title">Sign in</h2>
 
+                    <!-- <?php
+                    
+                    if(isset($message)){
+                        foreach($message as $message){
+                            echo '<div class="message">'.$message.'</div>';
+                        }
+                    }
+                    
+                    ?> -->
+
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "name" id="log_name">
+                        <input type="text" placeholder="Username" name= "username" id="log_name">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "data" id="log_pass">
+                        <input type="password" placeholder="Password" name = "password" id="log_pass">
                     </div>
                   
     
-                    <input type="submit" value="Login" class="btn solid" name = "click" >
+                    <input type="submit" value="Login" class="btn solid" name = "submit" >
             <!--<button name = "submit"  class ="btn solid "  >login</button> -->
 <!--done with login -->
                     <p class="social-text">Or Sign in with social platforms</p>
@@ -60,24 +69,45 @@
                 <form action="signup.php" class="sign-up-form" method= "POST" autocomplete = "off">
                     <h2 class="title">Sign up</h2>
 
+                    
+                    <!-- <?php
+                    
+                    if(isset($message)){
+                        foreach($message as $message){
+                            echo '<div class="message">'.$message.'</div>';
+                        }
+                    }
+                    
+                    ?> -->
+
                     <div class="input-field">
-                        <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="username"  name= "hi"   >
+                        <i class="fa-solid fa-signature"></i>
+                        <input type="text" placeholder="Name"  name= "name">
                     </div>
 
 
                     <div class="input-field">
+                        <i class="fa-solid fa-user"></i>
+                        <input type="text" placeholder="Username"  name= "username">
+                    </div>
+
+                    <div class="input-field">
                         <i class="fa-solid fa-envelope"></i>
-                        <input type="text" placeholder="email"  name= "hello"   >
+                        <input type="text" placeholder="Email"  name= "email">
                     </div>
 
                     
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "hi5"    >
+                        <input type="password" placeholder="Password" name = "password">
                     </div>
 
-                    <input type="submit" value="Sign up"  name="btn" class="btn solid">
+                    <div class="input-field">
+                        <i class="fa-solid fa-key"></i>
+                        <input type="password" placeholder="Confirm Password" name = "cpassword">
+                    </div>
+
+                    <input type="submit" value="Sign up" name="submit" class="btn solid">
     
      <!-- done-->
 

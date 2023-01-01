@@ -3,43 +3,45 @@
 require_once('connection.php');
 
  //code for connecting next page
-   session_start ();
+session_start ();
 
 
-if(isset($_POST['btn'])){
+if(isset($_POST['submit'])){
      
-     $UserNmane= mysqli_real_escape_string($conn,$_POST['hi']);
-     $Email = mysqli_real_escape_string($conn,$_POST['hello']);
-     $Password= mysqli_real_escape_string($conn,$_POST['hi5']);
-   
+  $Name = mysqli_real_escape_string($conn, $_POST['name']);
+  $Username = mysqli_real_escape_string($conn, $_POST['username']);
+  $Email = mysqli_real_escape_string($conn, $_POST['email']);
+  $Password= mysqli_real_escape_string($conn, $_POST['password']);
+  $CPassword= mysqli_real_escape_string($conn, $_POST['cpassword']);
 
-   if (empty($UserNmane)|| empty($Email) || empty($Password)){
+  $select = mysqli_query($conn, "SELECT * FROM account WHERE email = '$Email' AND password = '$Password'") or die('query failed');
 
-     echo 'Please fill the blanks' ;
-   }
-
-  else {
-      $pass= md5($Password); //increpted the password
-      $sql = "Insert into account (username,password,email) values('$UserNmane', '$Password',' $Email' )" ; //we want to see the pass so 
+  if(empty($Username) || empty($Email) || empty($Password)){
+    echo 'Please Fill In The Blanks';
+  }
+  elseif(mysqli_num_rows($select) > 0){
+    echo 'User Already Exists';
+  }
+  else{
+    if($Password != $CPassword){
+      $message[] = 'Password Did Not Match';
+    }
+    else{
+      $md5pass= md5($Password); //increpted the password
+      $sql = "INSERT INTO account(username, password, email, name) VALUES('$Username', '$md5pass', '$Email', '$Name')" ; //we want to see the pass so 
       //we use $Password in the query insted of $pass
-      $result = mysqli_query($conn, $sql);
+      $insert = mysqli_query($conn, $sql) or die('query failed');
 
+      if($insert){
+        echo 'Signup Complete';
+        header('location:index.php');
+      }
+      else{
+        echo 'Signup Failed';
+        header('location:login and signup.php');
+      }
+    }
   }
-  if ($result){
-     // a statement is need here to return index.php
-                                                        // echo'your record has been saved in database';
-    // $_SESSION['username']= $UserNmane;
-     header('location:index.php') ;
-
-  }
-
-  else {
-     echo'Please check your query';
-  }
-
-  
-
-
 }
 
 

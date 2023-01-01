@@ -1,58 +1,32 @@
-
 <?php
 
-    
 require_once('connection.php');
 
-//code for connecting next page
+ //code for connecting next page
 session_start ();
 
-      if(isset($_POST['click']))
-      {
-            // echo 'WELCOME HOME BABY';
 
-         $username =  mysqli_real_escape_string($conn,$_POST['name']); 
-         $password  = mysqli_real_escape_string($conn,$_POST['data']);
+if(isset($_POST['submit'])){
 
-        //echo $password;
-        //echo $username;
+  $Username = mysqli_real_escape_string($conn, $_POST['username']);
+  $Password= mysqli_real_escape_string($conn, md5($_POST['password']));
 
-        if(empty($username)|| empty($password)){
+  $select = mysqli_query($conn, "SELECT * FROM account WHERE username = '$Username' AND password = '$Password'") or die('query failed');
 
-           echo " please fill in the blanks  ";
+  if(empty($Username) || empty($Password)){
+   echo '<script type ="text/JavaScript">';  
+   echo 'alert("Please Fill In The Blanks")';  
+   echo '</script>';
+  }
+  elseif(mysqli_num_rows($select) > 0){
+    $row = mysqli_fetch_assoc($select);
+    header('location:index.php');
+  }
+  else{
+   echo '<script type ="text/JavaScript">';  
+   echo 'alert("Incorrect Username or Password")';  
+   echo '</script>';
+  }
+}
 
-        }
-        else
-        {
-          $query = "select username, password from account where username ='$username'";
-          $result = mysqli_query($conn, $query);
-
-          $row = mysqli_fetch_assoc($result);
-           
-          if(mysqli_num_rows($result) > 0)
-            {
-               if($password == $row["password"])
-               {
-                header('location:index.php') ;
-               }
-               else{
-                  echo $row["password"];
-                  echo $password;
-                echo "Incorrect password" ;
-               }
-
-            }
-
-            else {
-              echo'username not registered';
-           }
-        }
-         }
-        
-
-
-      
-  
 ?>
-
-

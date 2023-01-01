@@ -61,6 +61,16 @@ form{
     transition: 0.3s 0.7s ease-in-out;
 }
 
+.message{
+    margin: 5px 0px;
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    background-color: red;
+    color: white;
+    font-size: 20px;
+}
+
 form.sign-in-form{
     z-index: 2;
 }
@@ -197,6 +207,8 @@ form.sign-up-form{
     font-size: 16px;
     padding: 12px 0px;
 }
+
+
 
 .btn.transparent{
     margin: 10px 0px;

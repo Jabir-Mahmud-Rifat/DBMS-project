@@ -1,7 +1,7 @@
 <?php
     include("connection.php");
      session_start ();  
-    // echo "Welcome  ". $_SESSION['username'] ;  
+    // echo "Welcome  ". $_SESSION['username'] ;
 
 ?>
 
@@ -53,7 +53,9 @@
 
                     <ul class="nav-list">
                         <li class="nav-item">
+
                             <a href="login and signup.php" class="login-btn"  id="login-btn"><i class="fa-solid fa-user"></i></a>
+                            
                         </li>
 
                         <li class="nav-item">
