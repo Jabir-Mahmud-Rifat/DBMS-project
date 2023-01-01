@@ -35,15 +35,15 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Cart</a>
+                        <a href="cart.php" class="nav-link">Cart</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">About</a>
+                        <a href="about.php" class="nav-link">About</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-link">Contact</a>
+                        <a href="contact.php" class="nav-link">Contact</a>
                     </li>
                 </ul>
             </div>
@@ -56,7 +56,7 @@
                     </li>
 
                     <li class="nav-item">
-                        <a href="#" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
+                        <a href="cart.php" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
                     </li>
                 </ul>
 

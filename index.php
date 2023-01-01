@@ -36,7 +36,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-link">Cart</a>
+                            <a href="cart.html" class="nav-link">Cart</a>
                         </li>
 
                         <li class="nav-item">
@@ -44,7 +44,7 @@
                         </li>
 
                         <li class="nav-item">
-                        <a href="Contact.php" class="nav-link">Contact</a>
+                        <a href="contact.php" class="nav-link">Contact</a>
                         </li>
                     </ul>
                 </div>
@@ -57,7 +57,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="#" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
+                            <a href="cart.php" class="nav-cart" id="cart-shop""><i class="fa-solid fa-cart-shopping"></i></a>
                         </li>
                     </ul>
 
@@ -214,7 +214,7 @@
     <section class="banner">
         <h4>We Create Quality</h4>
         <h2>Up to <span>50% off</span> - on All T-shirts and Accessories</h2>
-        <button>Explore More</button>
+        <button onclick="window.location='shop.php'">Explore More</button>
     </section>
 
     <section class="feature-product">
