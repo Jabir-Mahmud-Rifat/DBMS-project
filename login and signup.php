@@ -27,13 +27,11 @@
 
                     <div class="input-field">
                         <i class="fa-solid fa-user"></i>
-                        <input type="text" placeholder="Username" name= "log_name"  >
                         <input type="text" placeholder="Username" name= "name" id="log_name">
                     </div>
 
                     <div class="input-field">
                         <i class="fa-solid fa-key"></i>
-                        <input type="password" placeholder="Password" name = "log_pass"  >
                         <input type="password" placeholder="Password" name = "data" id="log_pass">
                     </div>
                   
