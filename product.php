@@ -66,7 +66,7 @@
 
     <section class="product-details">
         <div class="single-pro-image">
-            <img src="https://i.ibb.co/VHj9KXb/theyyam-tshirt-mydesignation-image.jpg" class="main-img" width="100%" alt="">
+            <img src="https://i.ibb.co/VHj9KXb/theyyam-tshirt-mydesignation-image.jpg" class="main-img" id="main-img" width="100%" alt="">
 
             <div class="sml-img-grp">
                 <div class="sml-img-col">
@@ -195,6 +195,26 @@
 
         <h6>© 2022 Retail Club - All Rights Reserved</h6>
     </footer>
+
+    <script>
+        var mainImg = document.getElementsById("main-img");
+        var smlImg = document.getElementsByClassName("sml-img");
+
+        //document.write("sml-img");
+
+        smlImg[0].onclick = function(){
+            mainImg.src = smlImg[0].src;
+        };
+
+        smlImg[1].onclick = function(){
+            mainImg.src = smlImg[1].src;
+        };
+
+        smlImg[2].onclick = function(){
+            mainImg.src = smlImg[2].src;
+        };
+
+    </script>
     
 </body>
 </html>

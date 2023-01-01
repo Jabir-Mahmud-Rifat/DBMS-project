@@ -19,7 +19,7 @@
 </head>
 <body>
     <div class="self">
-        <header class="header" id="header">
+        <header class="header" id="header-index">
             <nav class="nav container">
                 <a href="index.php" class="nav-logo">
                     <i class="fa-solid fa-vest-patches"></i> Retail Club

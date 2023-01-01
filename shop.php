@@ -27,11 +27,11 @@
             <div class="nav-menu" id="nav-menu">
                 <ul class="nav-list">
                     <li class="nav-item">
-                        <a href="index.php" class="nav-link active">Home</a>
+                        <a href="index.php" class="nav-link">Home</a>
                     </li>
 
                     <li class="nav-item">
-                        <a href="shop.php" class="nav-link">Shop</a>
+                        <a href="shop.php" class="nav-link active">Shop</a>
                     </li>
 
                     <li class="nav-item">
@@ -64,12 +64,18 @@
         </nav>
     </header>
 
+    <section class="banner">
+        <h4>We Create Quality</h4>
+        <h2>Up to <span>50% off</span> - on All T-shirts and Accessories</h2>
+        <button>Explore More</button>
+    </section>
+
     <section class="feature-product">
         <h2>Our Products</h2>
         <p>Check these out</p>
         <div class="product-container">
 
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/2N16zHr/TOO-HOT-TO-HANDLE-mockup-image.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -85,7 +91,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/GMCtkxx/foodie-tshirt-image-mydesignation-eat-at-trivandrum-C.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -101,7 +107,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/FVDnPz5/harry-potter-tshirt-glow-in-the-dark-mydesignation-mockup-glow.gif" alt="">
                 <div class="description">
                     <span>Glow in the Dark</span>
@@ -117,7 +123,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/vjHxhMq/kgf-tshirt-mockup.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -134,7 +140,7 @@
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
             
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/HpGPRTk/manushyan-tshirt-mydesignation-mockup-latest-image.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -150,7 +156,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/9pf6KvS/malayali-tshirt-mydesignation-mockup-image-latest-golden-1.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -166,7 +172,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/VHj9KXb/theyyam-tshirt-mydesignation-image.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -182,7 +188,7 @@
                 </div>
                 <a href="#"><i class="fa-solid fa-cart-plus"></i></a>
             </div>
-            <div class="product">
+            <div onclick="window.location='product.php'" class="product">
                 <img src="https://i.ibb.co/Y2qWWZW/pwoli-tshirt-mydesignation-image-latest.jpg" alt="">
                 <div class="description">
                     <span>Unisex T-shirts</span>
@@ -202,6 +208,13 @@
         </div>
     </section>
 
+    <section class="pagination">
+        <a href="#">1</a>
+        <a href="#">2</a>
+        <a href="#">3</a>
+        <a href="#"><i class="fa-solid fa-angle-right"></i></a>
+    </section>
+
     <!-- footer section -->
     <footer>
         <h3>Retail Club</h3>
@@ -216,6 +229,8 @@
 
         <h6>© 2022 Retail Club - All Rights Reserved</h6>
     </footer>
+
+    <script src="js\app.js"></script>
     
 </body>
 </html>

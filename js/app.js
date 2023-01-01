@@ -11,3 +11,25 @@ sign_up_btn.addEventListener('click', () => {
 sign_in_btn.addEventListener('click', () => {
     container.classList.remove("sign-up-mode");
 });
+
+
+// --- Product Page Spotlight Image Selector
+
+var mainImg = document.getElementsById("main-img");
+var smlImg = document.getElementsByClassName("sml-img");
+
+smlImg[0].onclick = function(){
+    mainImg.src = smlImg[0].src;
+};
+
+smlImg[1].onclick = function(){
+    mainImg.src = smlImg[1].src;
+};
+
+smlImg[2].onclick = function(){
+    mainImg.src = smlImg[2].src;
+};
+
+smlImg[2].onclick = function(){
+    mainImg.src = smlImg[3].src;
+};
