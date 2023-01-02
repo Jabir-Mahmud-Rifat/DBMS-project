@@ -36,7 +36,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a href="cart.html" class="nav-link">Cart</a>
+                            <a href="cart.php" class="nav-link">Cart</a>
                         </li>
 
                         <li class="nav-item">
